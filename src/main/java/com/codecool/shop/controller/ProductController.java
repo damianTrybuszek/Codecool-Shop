@@ -2,8 +2,10 @@ package com.codecool.shop.controller;
 
 import com.codecool.shop.dao.ProductCategoryDao;
 import com.codecool.shop.dao.ProductDao;
+import com.codecool.shop.dao.SupplierDao;
 import com.codecool.shop.dao.implementation.ProductCategoryDaoMem;
 import com.codecool.shop.dao.implementation.ProductDaoMem;
+import com.codecool.shop.dao.implementation.SupplierDaoMem;
 import com.codecool.shop.model.ProductCategory;
 import com.codecool.shop.service.ProductService;
 import com.codecool.shop.config.TemplateEngineUtil;
@@ -20,28 +22,37 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet(urlPatterns = {"/", "/category/"})
+@WebServlet(urlPatterns = {"/", "/category/", "/supplier/"})
 public class ProductController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProductDao productDataStore = ProductDaoMem.getInstance();
         ProductCategoryDao productCategoryDataStore = ProductCategoryDaoMem.getInstance();
-        ProductService productService = new ProductService(productDataStore, productCategoryDataStore);
+        SupplierDao supplierDao = SupplierDaoMem.getInstance();
+        ProductService productService = new ProductService(productDataStore, productCategoryDataStore, supplierDao);
         String element = req.getRequestURI();
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
 
         context.setVariable("categories", productService.getAllProductCategory());
+        context.setVariable("suppliers", productService.getAllSuppliers());
+
         int categoryId = 0;
+        int supplierId = 0;
 
         if (element.contains("/category/")) {
             categoryId = Integer.parseInt(element.replaceAll("/category/", ""));
             context.setVariable("products", productService.getProductsForCategory(categoryId));
+        } else if (element.contains("/supplier/")) {
+            supplierId = Integer.parseInt(element.replaceAll("/supplier/", ""));
+            context.setVariable("products", productService.getProductsForSupplier(supplierId));
         } else {
             context.setVariable("products", productService.getAllProducts());
-        } ;
+        }
+        ;
         context.setVariable("highlightedCategory", categoryId);
+        context.setVariable("highlightedSupplier", supplierId);
 
 
         // // Alternative setting of the template context
