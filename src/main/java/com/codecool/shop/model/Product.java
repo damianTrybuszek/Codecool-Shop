@@ -1,10 +1,14 @@
 package com.codecool.shop.model;
 
+import lombok.Getter;
+
 import java.math.BigDecimal;
 import java.util.Currency;
 
 public class Product extends BaseModel {
-
+    private static int productsQuantity = 0;
+    @Getter
+    private int id;
     private BigDecimal defaultPrice;
     private Currency defaultCurrency;
     private ProductCategory productCategory;
@@ -13,6 +17,7 @@ public class Product extends BaseModel {
 
     public Product(String name, BigDecimal defaultPrice, String currencyString, String description, ProductCategory productCategory, Supplier supplier) {
         super(name, description);
+        this.id = productsQuantity++;
         this.setPrice(defaultPrice, currencyString);
         this.setSupplier(supplier);
         this.setProductCategory(productCategory);

@@ -4,11 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductCategory extends BaseModel {
+    private static int categoryQuantity = 0;
+    private int id;
     private String department;
     private List<Product> products;
 
     public ProductCategory(String name, String department, String description) {
         super(name);
+        this.id = categoryQuantity++;
         this.department = department;
         this.products = new ArrayList<>();
     }
