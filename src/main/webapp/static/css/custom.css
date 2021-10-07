@@ -60,3 +60,20 @@
 {
     margin: 0 0 11px;
 }
+
+.column-1-of-2-left
+{
+    float: left;
+    /*width: 50%;*/
+    flex: 50%;
+}
+.column-1-of-2-right
+{
+    float: right;
+    /*width: 50%;*/
+    flex: 50%;
+}
+
+.row-2-column{
+    column-count: 2;
+}
