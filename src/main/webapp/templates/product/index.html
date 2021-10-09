@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="utf-8" />
-    <meta name="author" content="Codecool" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta charset="utf-8"/>
+    <meta name="author" content="Codecool"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
     <title>Codecool Shop</title>
 
@@ -14,19 +14,20 @@
 
     <!--Latest compiled and minified Popper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
 
     <!-- Latest compiled and minified CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- End of Bootstrap components -->
-<<<<<<< Updated upstream
 
-    <link rel="stylesheet" type="text/css" href="/static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/custom.css"/>
 </head>
 
 <body>
@@ -37,96 +38,48 @@
 
 <div class="container">
     <div class="card">
-        <strong th:text="${category.name}">Category Title</strong>
-=======
-    <!--    Icons components start -->
-    <link rel="stylesheet" type="text/css" href="/static/img/fontello-a5fc62e0/css/to_codecoolshop.css">
-    <!--    Icon components end-->
-    <link rel="stylesheet" type="text/css" href="/static/css/custom.css"/>
-    <script src="/static/js/IndexWebSiteJS.js" defer></script>
-</head>
 
-<body>
-<header>
-    <div class="thumbnail">
-    <!--    <h1>Codecool Shop</h1>-->
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid" style="align-content: center">
-                <div class="wb-name">
-                    <a><h1>Codecool Shop</h1></a>
-                </div>
-                <div class="nav-container">
-                    <div class="nav-content">
-                        <i class="icon-user"></i>
-                    </div>
-                    <div class="nav-content">
-                        <i class="icon-basket-1"></i>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>
-</header>
-<nav id="nav-on-index">
-<!--    <div class="list-group-item">-->
-    <div class="category">
-<!--        <div id="empty"></div>-->
-        <div class="search-bar">
-            <form class="navbar-form pull-left">
-                <div id="set-input">
-                    <input type="text" class="span2" placeholder="Search">
-                </div>
-                <div id="set-button">
-                    <button type="submit" class="btn-search"><i class="icon-search-outline"></i></button>
-                </div>
-            </form>
-        </div>
-        <div class="btn-group">
-            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                <p>Category</p>
-                <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu" th:each="category,iterStat : ${categories}">
-                    <li th:each="category,iterStat : ${categories}" >
-                        <span th:if="${highlightedCategory == category.id}">
-                                <a class="dropdown-toggle disabled" th:href="@{'/category/'+${category.id}}" th:text="${category.name}">Category Name</a>
-                        </span>
+        <span th:if="${highlightedCategory == 0 and highlightedSupplier == 0}"><a th:href="@{/}">
+            <strong style="margin-left:20px; font-size: x-large" th:text="Home">Home</strong></a></span>
+        <span th:unless="${highlightedCategory == 0 and highlightedSupplier == 0}"><a th:href="@{/}">
+            <p style="font-size: x-large" th:text="Home">Category Title</p></a></span>
+
+        <div class="row row-2-column">
+            <div class="column column-1-of-2-left">
+                <h4 style="margin-left:20px">Categories:</h4>
+                <ul th:each="category,iterStat : ${categories}">
+                    <a th:href="@{'/category/'+${category.id}}">
+            <span th:if="${highlightedCategory == category.id}">
+            <strong><li th:text="${category.name}">Category Title</li></strong>
+            </span>
                         <span th:unless="${highlightedCategory == category.id}">
-                            <a class="dropdown-toggle disabled" th:href="@{'/category/'+${category.id}}" th:text="${category.name}">Category Name</a>
-                        </span>
-                    </li>
-            </ul>
+            <li th:text="${category.name}">Category Title</li>
+            </span>
+                    </a>
+                </ul>
+            </div>
+            <div class="column column-1-of-2-right">
+                <h4 style="margin-left:20px">Suppliers:</h4>
+                <ul th:each="supplier,iterStat : ${suppliers}">
+                    <a th:href="@{'/supplier/'+${supplier.id}}">
+            <span th:if="${highlightedSupplier == supplier.id}">
+            <strong><li th:text="${supplier.name}">Category Title</li></strong>
+            </span>
+                        <span th:unless="${highlightedSupplier == supplier.id}">
+            <li th:text="${supplier.name}">Category Title</li>
+            </span>
+                    </a>
+                </ul>
+            </div>
+
         </div>
->>>>>>> Stashed changes
     </div>
-</nav>
-<div class="container">
-<!--    <div class="card" style="clear: both">-->
-
-<!--        <span th:if="${highlightedCategory == 0}"><a th:href="@{/}">-->
-<!--            <strong th:text="Home">Category Title</strong></a></span>-->
-<!--        <span th:unless="${highlightedCategory == 0}"><a th:href="@{/}">-->
-<!--            <p th:text="Home">Category Title</p></a></span>-->
-
-
-<!--        <h4>Category list:</h4>-->
-<!--        <ul th:each="category,iterStat : ${categories}">-->
-<!--            <a th:href="@{'/category/'+${category.id}}">-->
-<!--            <span th:if="${highlightedCategory == category.id}">-->
-<!--            <strong><li th:text="${category.name}">Category Title</li></strong>-->
-<!--            </span>-->
-<!--                <span th:unless="${highlightedCategory == category.id}">-->
-<!--            <li th:text="${category.name}">Category Title</li>-->
-<!--            </span>-->
-<!--            </a>-->
-<!--        </ul>-->
-<!--    </div>-->
-    <div class="space-between"></div>
 
     <div id="products" class="row">
         <div class="col col-sm-12 col-md-6 col-lg-4" th:each="prod,iterStat : ${products}">
             <div class="card">
-                <img class="" src="http://placehold.it/400x250/000/fff" th:attr="src='/static/img/product_' + ${prod.id} + '.jpg'" alt="" />
+                <img class="" src="http://placehold.it/400x250/000/fff"
+                     th:attr="src='/static/img/product_' + ${prod.id} + '.jpg'" alt=""/>
                 <div class="card-header">
                     <h4 class="card-title" th:text="${prod.name}">Product name</h4>
                     <p class="card-text" th:text="${prod.description}">Product description... </p>
@@ -136,7 +89,7 @@
                         <p class="lead" th:text="${prod.getPrice()}">100 USD</p>
                     </div>
                     <div class="card-text">
-                        <a class="btn btn-success" th:id="${prod.getId()}" th:href="'products/' + ${prod.getId()}">Add to cart</a>
+                        <a class="btn btn-success" href="#">Add to cart</a>
                     </div>
                 </div>
             </div>
