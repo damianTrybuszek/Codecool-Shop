@@ -1,3 +1,7 @@
+a{
+
+    color: #333333;
+}
 .glyphicon {
     margin-right:5px;
 }
@@ -60,6 +64,88 @@
 {
     margin: 0 0 11px;
 }
+/* header css start */
+.jumbotron{
+    height: 70px;
+}
+.nav-container{
+    height: 70px;
+    width: 200px;
+}
+
+.nav-content{
+    float: left;
+    text-align: center;
+    height: 70px;
+    width: 70px;
+    margin-top: 15px;
+}
+.wb-name{
+    float: left;
+    text-align: center;
+    height: 70px;
+    max-width: fit-content;
+    margin-top: 15px;
+}
+
+/* Nav css start */
+#nav-on-index{
+    display: flex;
+    height: 40px;
+    background-color: #666666;
+    justify-content: center;
+}
+.category{
+    align-content: center;
+}
+#empty{
+    width: 700px;
+    height: 35px;
+    float: left;
+}
+.search-bar{
+    text-align: center;
+    margin-bottom: 5px;
+    height: 35px;
+    width: 300px;
+    float: left;
+}
+.btn-group{
+    margin-top: 3px;
+    float: left;
+    height: 35px;
+    width: 158px;
+}
+.btn-search{
+    text-align: center;
+    height: 35px;
+    width: 35px;
+    background-color: #666666;
+
+}
+.navbar-form{
+    height: 35px;
+    min-width: fit-content;
+    align-content: center;
+
+}
+#set-input{
+    float: left;
+    height: 35px;
+    width: 216px;
+    margin-top: 5px;
+}
+#set-button{
+    float: left;
+    width: 70px;
+    height: 35px;
+    margin-top: 3px;
+}
+.space-between{
+    height: 200px;
+    width: 100vw;
+}
+
 
 .column-1-of-2-left
 {
