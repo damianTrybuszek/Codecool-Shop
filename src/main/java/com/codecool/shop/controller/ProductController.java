@@ -29,8 +29,25 @@ public class ProductController extends HttpServlet {
 
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
+<<<<<<< Updated upstream
         context.setVariable("category", productService.getProductCategory(1));
         context.setVariable("products", productService.getProductsForCategory(1));
+=======
+
+        context.setVariable("categories", productService.getAllProductCategory());
+        int categoryId = 0;
+
+        if (element.contains("/category/")) {
+            categoryId = Integer.parseInt(element.replaceAll("/category/", ""));
+            context.setVariable("products", productService.getProductsForCategory(categoryId));
+        } else {
+            context.setVariable("products", productService.getAllProducts());
+        } ;
+        context.setVariable("highlightedCategory", categoryId);
+
+
+
+>>>>>>> Stashed changes
         // // Alternative setting of the template context
         // Map<String, Object> params = new HashMap<>();
         // params.put("category", productCategoryDataStore.find(1));
