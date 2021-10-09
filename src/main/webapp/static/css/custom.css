@@ -1,6 +1,10 @@
 a{
-
+    text-decoration: none;
     color: #333333;
+}
+a:hover{
+    color: #999999;
+    text-decoration: none;
 }
 .glyphicon {
     margin-right:5px;
