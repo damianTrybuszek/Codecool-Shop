@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5acce477-6f80-424f-88f6-f514993ffc11" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/product/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/product/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
