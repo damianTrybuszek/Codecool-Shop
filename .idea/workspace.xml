@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5acce477-6f80-424f-88f6-f514993ffc11" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/product/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/product/index.html" afterDir="false" />
+    <list default="true" id="ba6d646d-ac5d-4eed-be7d-eeb5075f7c26" name="Changes" comment="gitignore updated">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/ProductCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/ProductCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/Supplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/service/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,15 +22,30 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
+        <option value="Class" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="ProjectId" id="1z974VZj5LRL68OmGUQMGbmrVZM" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1zBgMW36oSURTHfQwbZcb2kFqBG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -32,19 +53,95 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.codecool.shop.service" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.codecool.shop.user" />
+      <recent name="com.codecool.shop.dao.implementation" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Maven.codecoolshop [jetty:run]">
+    <configuration name="CartTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Codecool-Shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codecool.shop.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codecool.shop.user" />
+      <option name="MAIN_CLASS_NAME" value="com.codecool.shop.user.CartTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerTest.t" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Codecool-Shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codecool.shop.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codecool.shop.user" />
+      <option name="MAIN_CLASS_NAME" value="com.codecool.shop.user.CustomerTest" />
+      <option name="METHOD_NAME" value="t" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductCategoryDaoMemTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Codecool-Shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codecool.shop.dao.implementation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codecool.shop.dao.implementation" />
+      <option name="MAIN_CLASS_NAME" value="com.codecool.shop.dao.implementation.ProductCategoryDaoMemTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="codecoolshop [jetty:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
+        <option name="myRunnerSettings">
+          <MavenRunnerSettings>
+            <option name="delegateBuildToMaven" value="false" />
+            <option name="environmentProperties">
+              <map />
+            </option>
+            <option name="jreName" value="jbr-11" />
+            <option name="mavenProperties">
+              <map />
+            </option>
+            <option name="passParentEnv" value="true" />
+            <option name="runMavenInBackground" value="true" />
+            <option name="skipTests" value="false" />
+            <option name="vmOptions" value="" />
+          </MavenRunnerSettings>
+        </option>
         <option name="myRunnerParameters">
           <MavenRunnerParameters>
             <option name="profiles">
@@ -66,24 +163,61 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="JUnit.CustomerTest.t" />
+      <item itemvalue="JUnit.ProductCategoryDaoMemTest.test" />
+      <item itemvalue="JUnit.CartTest.test" />
+      <item itemvalue="Maven.codecoolshop [jetty:run]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CartTest.test" />
+        <item itemvalue="JUnit.ProductCategoryDaoMemTest.test" />
+        <item itemvalue="JUnit.CustomerTest.t" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5acce477-6f80-424f-88f6-f514993ffc11" name="Changes" comment="" />
-      <created>1633548260625</created>
+      <changelist id="ba6d646d-ac5d-4eed-be7d-eeb5075f7c26" name="Changes" comment="" />
+      <created>1633626847549</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1633548260625</updated>
-      <workItem from="1633548263001" duration="1634000" />
-      <workItem from="1633591918584" duration="7651000" />
-      <workItem from="1633639367429" duration="12000" />
-      <workItem from="1633681959025" duration="1866000" />
-      <workItem from="1633693585443" duration="20678000" />
-      <workItem from="1633775073946" duration="1826000" />
-      <workItem from="1633784971683" duration="218000" />
-      <workItem from="1633785204841" duration="1125000" />
+      <updated>1633626847549</updated>
+      <workItem from="1633626848911" duration="10952000" />
+      <workItem from="1633895406641" duration="282000" />
+      <workItem from="1633895740629" duration="331000" />
     </task>
+    <task id="LOCAL-00001" summary="a">
+      <created>1633629537274</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1633629537274</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Cart with its methods and fast tests added&#10;Customer added">
+      <created>1633638356283</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1633638356283</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Cart with its methods and fast tests added&#10;Customer added">
+      <created>1633895598882</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1633895598882</updated>
+    </task>
+    <task id="LOCAL-00004" summary="gitignore updated">
+      <created>1633895655274</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1633895655274</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,5 +234,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="a" />
+    <MESSAGE value="Cart with its methods and fast tests added&#10;Customer added" />
+    <MESSAGE value="gitignore updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore updated" />
   </component>
 </project>
