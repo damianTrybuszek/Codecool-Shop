@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba6d646d-ac5d-4eed-be7d-eeb5075f7c26" name="Changes" comment="gitignore updated">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="ba6d646d-ac5d-4eed-be7d-eeb5075f7c26" name="Changes" comment="main merged">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/ProductCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/ProductCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/Supplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/ProductController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +182,7 @@
       <updated>1633626847549</updated>
       <workItem from="1633626848911" duration="10952000" />
       <workItem from="1633895406641" duration="282000" />
-      <workItem from="1633895740629" duration="331000" />
+      <workItem from="1633895740629" duration="2212000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1633629537274</created>
@@ -217,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633895655274</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="main merged">
+      <created>1633896108968</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1633896108968</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +241,7 @@
     <MESSAGE value="a" />
     <MESSAGE value="Cart with its methods and fast tests added&#10;Customer added" />
     <MESSAGE value="gitignore updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore updated" />
+    <MESSAGE value="main merged" />
+    <option name="LAST_COMMIT_MESSAGE" value="main merged" />
   </component>
 </project>
