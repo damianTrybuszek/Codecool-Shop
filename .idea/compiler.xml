@@ -2,12 +2,16 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="codecoolshop" />
+        <module name="Codecool-Shop" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Codecool-Shop" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
