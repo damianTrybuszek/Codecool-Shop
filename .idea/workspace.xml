@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba6d646d-ac5d-4eed-be7d-eeb5075f7c26" name="Changes" comment="main merged">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/templates/product/review.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/codecoolshop_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/codecoolshop_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ognl_ognl_3_1_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/codecoolshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/codecoolshop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/product/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/product/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,10 +58,14 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -127,7 +137,7 @@
             <option name="environmentProperties">
               <map />
             </option>
-            <option name="jreName" value="jbr-11" />
+            <option name="jreName" value="openjdk-16" />
             <option name="mavenProperties">
               <map />
             </option>
@@ -183,6 +193,7 @@
       <workItem from="1633626848911" duration="10952000" />
       <workItem from="1633895406641" duration="282000" />
       <workItem from="1633895740629" duration="2212000" />
+      <workItem from="1633984432932" duration="4211000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1633629537274</created>
@@ -243,5 +254,9 @@
     <MESSAGE value="gitignore updated" />
     <MESSAGE value="main merged" />
     <option name="LAST_COMMIT_MESSAGE" value="main merged" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
