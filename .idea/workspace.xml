@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba6d646d-ac5d-4eed-be7d-eeb5075f7c26" name="Changes" comment="main merged">
+    <list default="true" id="ba6d646d-ac5d-4eed-be7d-eeb5075f7c26" name="Changes" comment="order except cart class">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/dao/OrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/dao/implementation/OrderDaoMem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/user/LineProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/product/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/product/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +21,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -70,22 +75,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Maven.codecoolshop [jetty:run]">
-    <configuration name="CartTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Codecool-Shop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.codecool.shop.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.codecool.shop.user" />
-      <option name="MAIN_CLASS_NAME" value="com.codecool.shop.user.CartTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CustomerTest.t" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Codecool-Shop" />
       <extension name="coverage">
@@ -97,6 +86,22 @@
       <option name="PACKAGE_NAME" value="com.codecool.shop.user" />
       <option name="MAIN_CLASS_NAME" value="com.codecool.shop.user.CustomerTest" />
       <option name="METHOD_NAME" value="t" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Codecool-Shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codecool.shop.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codecool.shop.user" />
+      <option name="MAIN_CLASS_NAME" value="com.codecool.shop.user.OrderTest" />
+      <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -161,12 +166,12 @@
     <list>
       <item itemvalue="JUnit.CustomerTest.t" />
       <item itemvalue="JUnit.ProductCategoryDaoMemTest.test" />
-      <item itemvalue="JUnit.CartTest.test" />
+      <item itemvalue="JUnit.OrderTest.test" />
       <item itemvalue="Maven.codecoolshop [jetty:run]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CartTest.test" />
+        <item itemvalue="JUnit.OrderTest.test" />
         <item itemvalue="JUnit.ProductCategoryDaoMemTest.test" />
         <item itemvalue="JUnit.CustomerTest.t" />
       </list>
@@ -182,7 +187,8 @@
       <updated>1633626847549</updated>
       <workItem from="1633626848911" duration="10952000" />
       <workItem from="1633895406641" duration="282000" />
-      <workItem from="1633895740629" duration="2212000" />
+      <workItem from="1633895740629" duration="3510000" />
+      <workItem from="1633979415197" duration="6254000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1633629537274</created>
@@ -219,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633896108968</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="order except cart class">
+      <created>1633898215031</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1633898215031</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +255,7 @@
     <MESSAGE value="Cart with its methods and fast tests added&#10;Customer added" />
     <MESSAGE value="gitignore updated" />
     <MESSAGE value="main merged" />
-    <option name="LAST_COMMIT_MESSAGE" value="main merged" />
+    <MESSAGE value="order except cart class" />
+    <option name="LAST_COMMIT_MESSAGE" value="order except cart class" />
   </component>
 </project>
