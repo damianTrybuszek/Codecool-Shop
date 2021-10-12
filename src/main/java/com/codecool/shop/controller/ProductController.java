@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = {"/", "/category/", "/supplier/"})
+@WebServlet(urlPatterns = {"/", "/category/", "/supplier/", "/search/"})
 public class ProductController extends HttpServlet {
 
     @Override
@@ -43,6 +43,10 @@ public class ProductController extends HttpServlet {
         } else if (element.contains("/supplier/")) {
             supplierId = Integer.parseInt(element.replaceAll("/supplier/", ""));
             context.setVariable("products", productService.getProductsForSupplier(supplierId));
+        } else if (element.contains("/search/")){
+            String phrase = String.valueOf(context.getResponse());//przyjąć response i odczytac w odpowiedni sposób
+            phrase = "X";
+            context.setVariable("products", (productDataStore.search(phrase)));
         }
         else {
             context.setVariable("products", productService.getAllProducts());
