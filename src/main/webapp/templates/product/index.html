@@ -92,10 +92,12 @@
             <ul class="dropdown-menu">
                 <li th:each="category,iterStat : ${categories}" >
                         <span th:if="${highlightedCategory == category.id}">
-                                <a class="dropdown-toggle disabled" th:href="@{'/category/'+${category.id}}" th:text="${category.name}">Category Name</a>
+                            <strong><a class="dropdown-toggle disabled" th:href="@{'/category/'+${category.id}}"
+                                       th:text="${category.name}">Category Name</a></strong>
                         </span>
                     <span th:unless="${highlightedCategory == category.id}">
-                            <a class="dropdown-toggle disabled" th:href="@{'/category/'+${category.id}}" th:text="${category.name}">
+                            <a class="dropdown-toggle disabled" th:href="@{'/category/'+${category.id}}"
+                               th:text="${category.name}">
                                 Category Name
                             </a>
                         </span>
@@ -110,9 +112,9 @@
             <ul class="dropdown-menu">
                 <li th:each="supplier,iterStat : ${suppliers}">
                     <span th:if="${highlightedSupplier == supplier.id}">
-                        <a class="dropdown-toggle disabled" th:href="@{'/supplier/'+${supplier.id}}" th:text="${supplier.name}">
+                        <strong><a class="dropdown-toggle disabled" th:href="@{'/supplier/'+${supplier.id}}" th:text="${supplier.name}">
                             Category Name
-                        </a>
+                        </a></strong>
                     </span>
                     <span th:unless="${highlightedSupplier == supplier.id}">
                         <a class="dropdown-toggle disabled" th:href="@{'/supplier/'+${supplier.id}}" th:text="${supplier.name}">
