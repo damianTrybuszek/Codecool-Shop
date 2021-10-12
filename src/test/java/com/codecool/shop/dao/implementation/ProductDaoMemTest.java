@@ -35,6 +35,8 @@ class ProductDaoMemTest {
     data.add(new Product("Samsung CF390 27", new BigDecimal("120.9"), "USD", "Ultra curved screen for wide viewing area and image depth. Eye comfort - thanks to flicker free technology and eye saver mode.", monitor, samsung));
     data.add(new Product("Apple MacBook Pro 13 M1", new BigDecimal("1561.54"), "USD", "It was created for people with high expectations who do not tolerate defects and care about quality and elegance. If that's what you need, this device is the perfect product for you.", laptop, apple));
     data.add(new Product("Dell Latitude 5510", new BigDecimal("1216.18"), "USD", "Laptop Dell Latitude 5510 i5-10210U | 15,6\" FHD | 8GB | 256GB SSD | Int | Windows 10 Pro (S001L551015PL)", laptop, dell));
+    data.add(new Product("Apple2 MacBook Pro 13 M1", new BigDecimal("1561.54"), "USD", "It was created for people with high expectations who do not tolerate defects and care about quality and elegance. If that's what you need, this device is the perfect product for you.", laptop, apple));
+    data.add(new Product("Apple3 MacBook Pro 13 M1", new BigDecimal("1561.54"), "USD", "It was created for people with high expectations who do not tolerate defects and care about quality and elegance. If that's what you need, this device is the perfect product for you.", laptop, apple));
   }
 
   @Test
@@ -54,7 +56,11 @@ class ProductDaoMemTest {
     ProductDaoMem pdm = ProductDaoMem.getInstance();
     for (Product product : data)
       pdm.add(product);
-    System.out.println(pdm.search("qwer"));
-    System.out.println(pdm.search("Fire"));
+    System.out.println("qwer: " + pdm.search("qwer"));
+    System.out.println("Fire: " + pdm.search("Fire"));
+    System.out.println("pRo: " + pdm.search("pRo"));
+    System.out.println("idea: " + pdm.search("idea"));
+    System.out.println("apple: " + pdm.search("apple"));
+    System.out.println("laptop: " + pdm.search("laptop"));
   }
 }
