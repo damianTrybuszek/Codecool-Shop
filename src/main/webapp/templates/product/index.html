@@ -129,43 +129,43 @@
 <div class="space-between"></div>
 
 <div class="container">
-<!--    <div class="card">-->
+    <!--    <div class="card">-->
 
-<!--        <span th:if="${highlightedCategory == 0 and highlightedSupplier == 0}"><a th:href="@{/}">-->
-<!--            <strong style="margin-left:20px; font-size: x-large" th:text="Home">Home</strong></a></span>-->
-<!--        <span th:unless="${highlightedCategory == 0 and highlightedSupplier == 0}"><a th:href="@{/}">-->
-<!--            <p style="font-size: x-large" th:text="Home">Category Title</p></a></span>-->
+    <!--        <span th:if="${highlightedCategory == 0 and highlightedSupplier == 0}"><a th:href="@{/}">-->
+    <!--            <strong style="margin-left:20px; font-size: x-large" th:text="Home">Home</strong></a></span>-->
+    <!--        <span th:unless="${highlightedCategory == 0 and highlightedSupplier == 0}"><a th:href="@{/}">-->
+    <!--            <p style="font-size: x-large" th:text="Home">Category Title</p></a></span>-->
 
-<!--        <div class="row row-2-column">-->
-<!--            <div class="column column-1-of-2-left">-->
-<!--                <h4 style="margin-left:20px">Categories:</h4>-->
-<!--                <ul th:each="category,iterStat : ${categories}">-->
-<!--                    <a th:href="@{'/category/'+${category.id}}">-->
-<!--            <span th:if="${highlightedCategory == category.id}">-->
-<!--            <strong><li th:text="${category.name}">Category Title</li></strong>-->
-<!--            </span>-->
-<!--                        <span th:unless="${highlightedCategory == category.id}">-->
-<!--            <li th:text="${category.name}">Category Title</li>-->
-<!--            </span>-->
-<!--                    </a>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--            <div class="column column-1-of-2-right">-->
-<!--                <h4 style="margin-left:20px">Suppliers:</h4>-->
-<!--                <ul th:each="supplier,iterStat : ${suppliers}">-->
-<!--                    <a th:href="@{'/supplier/'+${supplier.id}}">-->
-<!--            <span th:if="${highlightedSupplier == supplier.id}">-->
-<!--            <strong><li th:text="${supplier.name}">Category Title</li></strong>-->
-<!--            </span>-->
-<!--                        <span th:unless="${highlightedSupplier == supplier.id}">-->
-<!--            <li th:text="${supplier.name}">Category Title</li>-->
-<!--            </span>-->
-<!--                    </a>-->
-<!--                </ul>-->
-<!--            </div>-->
+    <!--        <div class="row row-2-column">-->
+    <!--            <div class="column column-1-of-2-left">-->
+    <!--                <h4 style="margin-left:20px">Categories:</h4>-->
+    <!--                <ul th:each="category,iterStat : ${categories}">-->
+    <!--                    <a th:href="@{'/category/'+${category.id}}">-->
+    <!--            <span th:if="${highlightedCategory == category.id}">-->
+    <!--            <strong><li th:text="${category.name}">Category Title</li></strong>-->
+    <!--            </span>-->
+    <!--                        <span th:unless="${highlightedCategory == category.id}">-->
+    <!--            <li th:text="${category.name}">Category Title</li>-->
+    <!--            </span>-->
+    <!--                    </a>-->
+    <!--                </ul>-->
+    <!--            </div>-->
+    <!--            <div class="column column-1-of-2-right">-->
+    <!--                <h4 style="margin-left:20px">Suppliers:</h4>-->
+    <!--                <ul th:each="supplier,iterStat : ${suppliers}">-->
+    <!--                    <a th:href="@{'/supplier/'+${supplier.id}}">-->
+    <!--            <span th:if="${highlightedSupplier == supplier.id}">-->
+    <!--            <strong><li th:text="${supplier.name}">Category Title</li></strong>-->
+    <!--            </span>-->
+    <!--                        <span th:unless="${highlightedSupplier == supplier.id}">-->
+    <!--            <li th:text="${supplier.name}">Category Title</li>-->
+    <!--            </span>-->
+    <!--                    </a>-->
+    <!--                </ul>-->
+    <!--            </div>-->
 
-<!--        </div>-->
-<!--    </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
 
     <div id="products" class="row">
         <div class="col col-sm-12 col-md-6 col-lg-4" th:each="prod,iterStat : ${products}">
@@ -182,10 +182,10 @@
                     </div>
                     <div class="card-text">
                         <form method="post" action="/cart">
-                        <button type="submit" class="btn btn-success"  th:id="${prod.id}" onclick="addProductToCart(this.id)">
-                            Add to cart</button>
+                            <button type="submit" class="btn btn-success"  th:id="${prod.id}" onclick="addProductToCart(this.id)">
+                                Add to cart</button>
                         </form>
-<!--                        <a class="btn btn-success"  th:id="${prod.id}" onclick="addProductToCart(this.id)">Add to cart</a>-->
+                        <!--                        <a class="btn btn-success"  th:id="${prod.id}" onclick="addProductToCart(this.id)">Add to cart</a>-->
                     </div>
                 </div>
             </div>
