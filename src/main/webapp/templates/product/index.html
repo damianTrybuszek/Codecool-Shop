@@ -7,6 +7,8 @@
 
     <title>Codecool Shop</title>
 
+    <script type="text/javascript" th:src="@{static/js/main.js}" defer></script>
+
     <!-- Bootstrap components -->
     <!-- Latest compiled and minified Jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -61,7 +63,9 @@
         <div class="search-bar">
             <form class="navbar-form pull-left">
                 <div id="set-input">
-                    <input type="text" class="span2" placeholder="Search">
+                    <label>
+                        <input type="text" class="span2" placeholder="Search">
+                    </label>
                 </div>
                 <div id="set-button">
                     <button type="submit" class="btn-search"><i class="icon-search-outline"></i></button>
@@ -171,18 +175,15 @@
                             <p class="lead" th:text="${prod.getPrice()}">100 USD</p>
                         </div>
                         <div class="card-text">
-                            <a class="btn btn-success" href="#">Add to cart</a>
+                            <a class="btn btn-success" data-th-attr="product-id=${prod.getId()}" href="/#">Add to
+                                cart</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-
 <div th:replace="footer.html :: copy"></div>
-
-
 </body>
 </html>

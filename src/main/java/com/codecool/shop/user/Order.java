@@ -22,6 +22,15 @@ public class Order {
     }
   }
 
+  public void addProduct(int id) {
+    Product product = getProduct(id);
+    if (cart.containsKey(product)) {
+      cart.put(product, cart.get(product) + 1);
+    } else {
+      cart.put(product, 1);
+    }
+  }
+
   public Product getProduct(int id) {
     for (Product product : cart.keySet()) {
       if (product.getId() == id)
