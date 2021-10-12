@@ -9,7 +9,7 @@ import com.codecool.shop.dao.implementation.CartDaoMem;
 import com.codecool.shop.dao.implementation.ProductDaoMem;
 import com.google.gson.Gson;
 import org.json.JSONObject;
-import utill.HandlingJSonObject;
+import com.codecool.shop.utill.HandlingJSonObject;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

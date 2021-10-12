@@ -1,14 +1,12 @@
 addProductToCart();
+searchPhrase();
 
 function addProductToCart() {
   let buttons = document.getElementsByClassName("btn-success");
   for (let button of buttons) {
     button.addEventListener("click", async function () {
-      console.debug("listener works");
       let productId = button.getAttribute("product-id");
-      console.debug("get attribute (product id) works: " + productId);
       await addProductToCartRequest({productId: productId});
-      console.debug("done");
     })
   }
 }
@@ -29,4 +27,14 @@ async function apiPost(url, payload) {
     // ? .json() ?
     return response;
   }
+}
+
+function searchPhrase(){
+  let searchInputArea = document.getElementById("search-input");
+  let searchSubmitButton = document.getElementById("search-submit")
+
+  searchSubmitButton.addEventListener("click", function () {
+    let searchPhrase = searchInputArea.value;
+    apiPost("/search/", searchPhrase);
+  })
 }

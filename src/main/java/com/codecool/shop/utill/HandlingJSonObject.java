@@ -1,4 +1,4 @@
-package utill;
+package com.codecool.shop.utill;
 
 import com.google.gson.Gson;
 import org.json.JSONObject;
@@ -24,15 +24,13 @@ public class HandlingJSonObject {
         if (jsonBody == null || jsonBody.trim().length() == 0) {
             System.out.println("Request is null");
         }
-        JSONObject jObj = new JSONObject(jsonBody);
-        return jObj;
+        return new JSONObject(jsonBody);
     }
 
     public String makeJsonResponse(String key, String value)  {
         Message message = new Message();
         message.setKey(key);
         message.setValue(value);
-        String jsonString = gson.toJson(message);
-        return jsonString;
+        return gson.toJson(message);
     }
 }

@@ -1,4 +1,4 @@
-package utill;
+package com.codecool.shop.utill;
 
 public class ProductId {
     private String productId = "";

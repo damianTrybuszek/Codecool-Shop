@@ -8,9 +8,7 @@
     <title>Codecool Shop</title>
 
     <script type="text/javascript" th:src="@{static/js/main.js}" defer></script>
-    <script src="/static/js/IndexWebSiteJS.js" type="text/javascript">
-        import addProductToCart from "../../static/js/IndexWebSiteJS";
-    </script>
+    <script src="/static/js/IndexWebSiteJS.js" type="text/javascript"></script>
 
     <!-- Bootstrap components -->
     <!-- Latest compiled and minified Jquery -->
@@ -64,14 +62,15 @@
     <div class="category">
         <!--        <div id="empty"></div>-->
         <div class="search-bar">
-            <form class="navbar-form pull-left">
+            <form class="navbar-form pull-left" method="POST" action="/search/">
                 <div id="set-input">
                     <label>
-                        <input type="text" class="span2" placeholder="Search">
+                        <input id="search-input" type="text" class="span2" placeholder="Search">
                     </label>
                 </div>
                 <div id="set-button">
-                    <button type="submit" class="btn-search"><i class="icon-search-outline"></i></button>
+                    <button id="search-submit" type="submit" class="btn-search"><i class="icon-search-outline"></i>
+                    </button>
                 </div>
             </form>
         </div>
@@ -179,9 +178,11 @@
                         </div>
                         <div class="card-text">
                             <form method="post" action="/cart">
-                        <button type="submit" class="btn btn-success"  th:id="${prod.id}" onclick="addProductToCart(this.id)">
-                            Add to cart</button>
-                        </form>
+                                <button type="submit" class="btn btn-success" th:id="${prod.id}"
+                                        onclick="addProductToCart(this.id)">
+                                    Add to cart
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
