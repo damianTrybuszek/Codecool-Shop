@@ -1,5 +1,6 @@
-package utill;
+package com.codecool.shop.utill;
 
+import com.codecool.shop.utill.Message;
 import com.google.gson.Gson;
 import org.json.JSONObject;
 

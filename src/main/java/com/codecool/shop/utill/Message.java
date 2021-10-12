@@ -1,4 +1,4 @@
-package utill;
+package com.codecool.shop.utill;
 
 public class Message {
     private String key = null;
