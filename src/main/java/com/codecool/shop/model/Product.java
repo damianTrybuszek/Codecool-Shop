@@ -57,6 +57,10 @@ public class Product extends BaseModel {
     this.productCategory.addProduct(this);
   }
 
+  public boolean hasPhrase(String searchPhrase) {
+    return this.toString().toUpperCase().contains(searchPhrase.toUpperCase());
+  }
+
   public Supplier getSupplier() {
     return supplier;
   }

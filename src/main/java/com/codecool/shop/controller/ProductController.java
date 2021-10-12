@@ -43,7 +43,8 @@ public class ProductController extends HttpServlet {
         } else if (element.contains("/supplier/")) {
             supplierId = Integer.parseInt(element.replaceAll("/supplier/", ""));
             context.setVariable("products", productService.getProductsForSupplier(supplierId));
-        } else {
+        }
+        else {
             context.setVariable("products", productService.getAllProducts());
         }
         context.setVariable("highlightedCategory", categoryId);
