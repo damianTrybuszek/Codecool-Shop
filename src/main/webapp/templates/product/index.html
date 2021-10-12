@@ -7,6 +7,9 @@
 
     <title>Codecool Shop</title>
 
+    <script src="/static/js/IndexWebSiteJS.js" type="text/javascript">
+        import addProductToCart from "../../static/js/IndexWebSiteJS";
+    </script>
     <!-- Bootstrap components -->
     <!-- Latest compiled and minified Jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -30,6 +33,8 @@
     <link rel="stylesheet" type="text/css" href="/static/img/fontello-a5fc62e0/css/to_codecoolshop.css">
     <!--  Fontello symbols End  -->
     <link rel="stylesheet" type="text/css" href="/static/css/custom.css"/>
+
+
 </head>
 
 <body>
@@ -47,13 +52,24 @@
                         <i class="icon-user"></i>
                     </div>
                     <div class="nav-content">
-                        <i class="icon-basket-1"></i>
+                        <div class="basket">
+                            <a href="#" id="cart">
+                                <i class="icon-basket-1"></i>
+                            </a>
+                        </div>
+                        <div class="numberItems">
+                            <span class="badge" th:text="${numProdInCart}">Number</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </nav>
     </div>
 </header>
+<!--                                <i class="icon-basket-1"></i>-->
+
+
+
 <nav id="nav-on-index">
     <!--    <div class="list-group-item">-->
     <div class="category">
@@ -163,7 +179,11 @@
                         <p class="lead" th:text="${prod.getPrice()}">100 USD</p>
                     </div>
                     <div class="card-text">
-                        <a class="btn btn-success" href="#">Add to cart</a>
+                        <form method="post" action="/cart">
+                        <button type="submit" class="btn btn-success"  th:id="${prod.id}" onclick="addProductToCart(this.id)">
+                            Add to cart</button>
+                        </form>
+<!--                        <a class="btn btn-success"  th:id="${prod.id}" onclick="addProductToCart(this.id)">Add to cart</a>-->
                     </div>
                 </div>
             </div>
@@ -173,6 +193,15 @@
 </div>
 
 <div th:replace="footer.html :: copy"></div>
+
+<!--<script>-->
+<!--    function addProductToCart(id) {-->
+<!--        let element = document.getElementById(id);-->
+<!--        let productId = element.getAttribute("id")-->
+<!--        console.log(productId);-->
+
+<!--    }-->
+<!--</script>-->
 
 </body>
 </html>

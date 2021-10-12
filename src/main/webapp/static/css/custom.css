@@ -167,3 +167,13 @@ a:hover{
 .row-2-column{
     column-count: 2;
 }
+/* basket in header interact */
+.basket {
+    float: left;
+}
+.badge {
+    float: left;
+}
+
+
+
