@@ -146,8 +146,8 @@ a:hover{
     margin-top: 3px;
 }
 .space-between{
-    height: 100px;
-    width: 100%;
+    height: 200px;
+    width: 100vw;
 }
 
 
@@ -167,3 +167,13 @@ a:hover{
 .row-2-column{
     column-count: 2;
 }
+/* basket in header interact */
+.basket {
+    float: left;
+}
+.badge {
+    float: left;
+}
+
+
+
