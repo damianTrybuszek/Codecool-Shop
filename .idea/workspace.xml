@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba6d646d-ac5d-4eed-be7d-eeb5075f7c26" name="Changes" comment="new products">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/codecool/shop/dao/implementation/ProductDaoMemTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/config/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/config/Initializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/dao/implementation/ProductDaoMem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/dao/implementation/ProductDaoMem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/service/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,10 +22,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="JavaScript File" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -64,11 +71,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.codecool.shop.user" />
       <recent name="com.codecool.shop.dao.implementation" />
+      <recent name="com.codecool.shop.user" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.codecoolshop [jetty:run]">
+  <component name="RunManager" selected="JUnit.ProductDaoMemTest.test">
     <configuration name="CustomerTest.t" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Codecool-Shop" />
       <extension name="coverage">
@@ -117,6 +124,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductDaoMemTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Codecool-Shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codecool.shop.dao.implementation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codecool.shop.dao.implementation" />
+      <option name="MAIN_CLASS_NAME" value="com.codecool.shop.dao.implementation.ProductDaoMemTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="codecoolshop [jetty:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -147,9 +170,11 @@
       <item itemvalue="JUnit.ProductCategoryDaoMemTest.test" />
       <item itemvalue="JUnit.OrderTest.test" />
       <item itemvalue="Maven.codecoolshop [jetty:run]" />
+      <item itemvalue="JUnit.ProductDaoMemTest.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductDaoMemTest.test" />
         <item itemvalue="JUnit.OrderTest.test" />
         <item itemvalue="JUnit.ProductCategoryDaoMemTest.test" />
         <item itemvalue="JUnit.CustomerTest.t" />
@@ -170,7 +195,7 @@
       <workItem from="1633979415197" duration="6786000" />
       <workItem from="1634032806006" duration="1380000" />
       <workItem from="1634035544348" duration="551000" />
-      <workItem from="1634036416513" duration="8617000" />
+      <workItem from="1634036416513" duration="11467000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1633629537274</created>
@@ -256,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634043824083</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="new products">
+      <created>1634054522617</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1634054522617</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,5 +317,12 @@
     <MESSAGE value="new categories, suppliers and products" />
     <MESSAGE value="new products" />
     <option name="LAST_COMMIT_MESSAGE" value="new products" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="MavenRunConfiguration">
+        <watch expression="data.stream().filter(t -&gt; t.getProductCategory().equals(productCategory)).collect(Collectors.toList());" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

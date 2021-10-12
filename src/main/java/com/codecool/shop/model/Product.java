@@ -57,6 +57,10 @@ public class Product extends BaseModel {
     this.productCategory.addProduct(this);
   }
 
+  public boolean hasPhrase(String searchPhrase) {
+    return this.toStringSearch().toUpperCase().contains(searchPhrase.toUpperCase());
+  }
+
   public Supplier getSupplier() {
     return supplier;
   }
@@ -80,5 +84,17 @@ public class Product extends BaseModel {
         this.defaultCurrency.toString(),
         this.productCategory.getName(),
         this.supplier.getName());
+  }
+
+  public String toStringSearch() {
+    StringBuilder sb = new StringBuilder();
+    sb.append(this.id);
+    sb.append(this.name);
+    sb.append(this.defaultPrice);
+    sb.append(this.defaultCurrency.toString());
+    sb.append(this.productCategory.getName());
+    sb.append(this.supplier.getName());
+
+    return sb.toString();
   }
 }

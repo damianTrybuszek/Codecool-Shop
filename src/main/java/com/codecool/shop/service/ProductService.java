@@ -47,4 +47,5 @@ public class ProductService {
     var supplier = supplierDao.find(supplierId);
     return productDao.getBy(supplier);
   }
+
 }

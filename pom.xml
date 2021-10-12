@@ -113,5 +113,10 @@
             <artifactId>jetty-util-ajax</artifactId>
             <version>9.4.36.v20210114</version>
         </dependency>
+      <dependency>
+        <groupId>org.apache.camel</groupId>
+        <artifactId>camel-util-json</artifactId>
+        <version>3.11.2</version>
+      </dependency>
     </dependencies>
 </project>
