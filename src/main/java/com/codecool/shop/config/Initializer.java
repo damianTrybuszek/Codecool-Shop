@@ -48,6 +48,8 @@ public class Initializer implements ServletContextListener {
         supplierDataStore.add(huawei);
         Supplier xiaomi = new Supplier("Xiaomi", "Computers, smartphones, smartwatches");
         supplierDataStore.add(xiaomi);
+        Supplier acer = new Supplier("Acer", "Computers, smartphones, smartwatches");
+        supplierDataStore.add(acer);
 
 
         //setting up a new product category
@@ -85,6 +87,18 @@ public class Initializer implements ServletContextListener {
         productDataStore.add(new Product("SAMSUNG Galaxy Watch 4", new BigDecimal("243.94"), "USD", "In cooperation with Google, we have created the new Wear OS Powered by Samsung operating system. As a result, you gain access to the most popular applications2 (also those offered by third companies) and you can enjoy their incredibly simple operation from the smartwatch.", smartwatch, samsung));
         productDataStore.add(new Product("Apple Watch Series 6", new BigDecimal("882.68"), "USD", "A revolutionary new sensor with an app will measure your blood oxygenation. Anywhere and at any time you can take an EKG. And on the refined non-fading Retina display, you can read your training data in no time. Apple Watch Series 6 will help you live healthier, more active and connected with the world.", smartwatch, apple));
         productDataStore.add(new Product("Samsung UE43AU7192 LED 43'' 4K Ultra HD Tizen", new BigDecimal("453.83"), "USD", "A TV with an LED matrix will certainly meet the expectations of demanding customers. The unquestionable advantage of this backlight technology is the excellent color reproduction. In addition, we are dealing with a very energy-saving solution. It is an ideal proposition for all people who care about above-average image quality and low operating costs. Choose a proven model that will be widely used in your home.", tv_set, samsung));
+        productDataStore.add(new Product("Samsung S24R350", new BigDecimal("148.43"), "USD", "All-round monitor - for work, for graphics, for games. Design frameless construction plus great parameters make it a monitor for everyone. Recommended by customers !!!", monitor, samsung));
+        productDataStore.add(new Product("Acer XF240QSbiipr", new BigDecimal("206.39"), "USD", "Up to 165Hz in cooperation with AMD® FreeSync ™ technology will provide you with fantastic hours spent in front of this monitor, and thanks to Acer EyeProtect you will protect your eyesight from harmful radiation!", monitor, acer));
+        productDataStore.add(new Product("MSI Optix G27C7", new BigDecimal("251.75"), "USD", "Optix monitors use a 1500R curved panel which is the most convenient and suitable for a wide range of computing and gaming applications.", monitor, msi));
+        productDataStore.add(new Product("HP X24c", new BigDecimal("249.42"), "USD", "HP curved monitor with 144Hz refresh rate. With AMD FreeSync ™ Premium technology you can forget about lags and enjoy smoother gameplay!", monitor, hp));
+        productDataStore.add(new Product("LG UltraGear 27GL63T-B", new BigDecimal("302.15"), "USD", "27 '' G-Sync® Compliant FHD IPS Monitor, Adaptive-Sync. With a 144Hz refresh rate, objects are rendered clearly for smoother gameplay and an almost surreal visual fluidity!", monitor, lg));
 //        productDataStore.add(new Product("S", new BigDecimal("4"), "USD", "", smartphone, huawei));
+//        productDataStore.add(new Product("S", new BigDecimal("4"), "USD", "", smartphone, huawei));
+//        productDataStore.add(new Product("S", new BigDecimal("4"), "USD", "", smartphone, huawei));
+//        productDataStore.add(new Product("S", new BigDecimal("4"), "USD", "", smartphone, huawei));
+//        productDataStore.add(new Product("S", new BigDecimal("4"), "USD", "", smartphone, huawei));
+//        productDataStore.add(new Product("S", new BigDecimal("4"), "USD", "", smartphone, huawei));
+//        productDataStore.add(new Product("S", new BigDecimal("4"), "USD", "", smartphone, huawei));
+
     }
 }
