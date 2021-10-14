@@ -39,7 +39,7 @@ public class CartController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
-        RequestDispatcher dispatcher = req.getRequestDispatcher("webapp/templates/product/index.html");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("webapp/templates/product/oldindex.html");
         PrintWriter out = resp.getWriter();
         String element = req.getRequestURI();
 
@@ -87,7 +87,7 @@ public class CartController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher dispatcher = req.getRequestDispatcher("webapp/templates/product/index.html");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("webapp/templates/product/oldindex.html");
         PrintWriter out = resp.getWriter();
 
         HandlingJSonObject hJson = new HandlingJSonObject();
