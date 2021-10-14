@@ -35,7 +35,7 @@ public class CartController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
-        RequestDispatcher dispatcher = req.getRequestDispatcher("webapp/templates/product/oldindex.html");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("webapp/templates/product/index.html");
         PrintWriter out = resp.getWriter();
         String element = req.getRequestURI();
 
