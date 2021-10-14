@@ -1,4 +1,4 @@
-target/>>>>>>> 175250a30c3709b0d86c5ff9364e05c377f51e86
+target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -15,4 +15,4 @@ README.md
 /src/main/java/com/codecool/shop/user/Customer.java
 /src/test/java/com/codecool/shop/user/CustomerTest.java
 /src/test/java/com/codecool/shop/dao/implementation/ProductCategoryDaoMemTest.java
-.idea
+.idea/
