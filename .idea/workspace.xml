@@ -4,51 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba6d646d-ac5d-4eed-be7d-eeb5075f7c26" name="Changes" comment="now it works">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/codecoolshop_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/hotswap_agent.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_4_36_v20210114.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_ajax_9_4_36_v20210114.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20180130.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_2_0_0_alpha5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_2_0_0_alpha5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml~Stashed changes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ba6d646d-ac5d-4eed-be7d-eeb5075f7c26" name="Changes" comment="VISUAL CHANGES v2">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_12.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_13.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_14.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_15.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_16.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_17.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_18.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_18.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_19.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_19.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_20.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_21.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/IndexWebSiteJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/IndexWebSiteJS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/product/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/product/oldindex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/product/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/product/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +193,7 @@
       <workItem from="1634032806006" duration="1380000" />
       <workItem from="1634035544348" duration="551000" />
       <workItem from="1634036416513" duration="19203000" />
-      <workItem from="1634237337394" duration="9162000" />
+      <workItem from="1634237337394" duration="9510000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1633629537274</created>
@@ -363,7 +321,21 @@
       <option name="project" value="LOCAL" />
       <updated>1634237538904</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="VISUAL CHANGES">
+      <created>1634246758921</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1634246758921</updated>
+    </task>
+    <task id="LOCAL-00020" summary="VISUAL CHANGES v2">
+      <created>1634246792886</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1634246792886</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,6 +367,8 @@
     <MESSAGE value="search in products backend" />
     <MESSAGE value="search still doesnt fucking work" />
     <MESSAGE value="now it works" />
-    <option name="LAST_COMMIT_MESSAGE" value="now it works" />
+    <MESSAGE value="VISUAL CHANGES" />
+    <MESSAGE value="VISUAL CHANGES v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="VISUAL CHANGES v2" />
   </component>
 </project>
