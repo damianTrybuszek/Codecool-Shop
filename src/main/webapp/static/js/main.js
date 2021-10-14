@@ -1,5 +1,5 @@
 // addProductToCart();
-searchPhrase();
+// searchPhrase();
 
 // function addProductToCart() {
 //   let buttons = document.getElementsByClassName("btn-success");

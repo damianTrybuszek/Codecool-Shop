@@ -50,7 +50,14 @@
                         <i class="icon-user"></i>
                     </div>
                     <div class="nav-content">
-                        <i class="icon-basket-1"><span id="numberProd" onchange="showProdNumber()"></span></i>
+                        <i class="icon-basket-1">
+                            <span id="numberProd" th:if="${cartQuantity > 0}" th:text="${cartQuantity}">
+                                Category Name
+                            </span>
+                            <span th:unless="${cartQuantity == 0}" th:text="${cartQuantity}">
+                                Category Name
+                            </span>
+                        </i>
                     </div>
                 </div>
             </div>

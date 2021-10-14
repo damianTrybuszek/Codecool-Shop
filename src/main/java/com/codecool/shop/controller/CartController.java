@@ -15,6 +15,7 @@ import com.codecool.shop.model.Product;
 import com.codecool.shop.utill.HandlingJSonObject;
 import com.codecool.shop.utill.Message;
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import org.json.JSONObject;
 import com.codecool.shop.utill.HandlingJSonObject;
 import org.thymeleaf.TemplateEngine;
@@ -101,13 +102,21 @@ public class CartController extends HttpServlet {
 //
 //            System.out.println(cartString);
 
-            System.out.println(cartDaoMem.getCart());
+//            System.out.println(cartDaoMem.getCart());
             int numberProd = cartDaoMem.countProduct();
             System.out.println(numberProd);
             resp.setStatus(200);
             resp.setContentType("application/json");
             resp.setCharacterEncoding("UTF-8");
-            out.print(numberProd);
+            String message = "Product in Cart";
+
+            JsonArray jsonArray= new JsonArray();
+            jsonArray.add(message);
+            jsonArray.add(numberProd);
+            System.out.println(jsonArray);
+
+            out.print(jsonArray);
+
 
         }
 //        resp.sendRedirect("/");

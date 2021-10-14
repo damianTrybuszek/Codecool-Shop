@@ -2,22 +2,22 @@ function addProductToCart(id) {
     let element = document.getElementById(id)
     let productId = element.getAttribute("id")
 
-    sendProductToCart(productId).then(number => {
-        addRealNumber(number)
-        addAlertDiv()
+    sendProductToCart(productId).then(message => {
+        addRealNumber(message)
+        addAlertDiv(message)
         setTimeout(function () {
             let empty = document.getElementById("alert-position");
             empty.remove();
-        }, 500);
+        }, 1000);
     })
 }
 
-// function showProdNumber() {
-//     let response = getData("/cart")
-//     let resp = JSON.parse(response)
-//     console.log(resp["numberProd"])
-//     addRealNumber(resp)
-// }
+function showProdNumber() {
+    let response = getData("/cart")
+    let resp = JSON.parse(response)
+    console.log(resp["numberProd"])
+    addRealNumber(resp)
+}
 
 function sendProductToCart(productId) {
     let bodyContent = {
@@ -41,6 +41,7 @@ async function getData(url) {
     if (response.status == 200) {
         let data = await response.json()
         return data
+
     } else {
         return error
     }
@@ -54,6 +55,7 @@ async function postData(url, bodyContent) {
         },
         body: JSON.stringify(bodyContent),
     });
+    console.log(response)
     const data = await response.json();
     return data;
 }
@@ -74,15 +76,12 @@ async function putData(url, bodyContent) {
     })
 }
 
-// function toJSon(response){
-//     return JSON.stringify(response.)
-// }
 
-function addAlertDiv() {
-    // let responseJson = JSON.stringify(response, "add")
+
+function addAlertDiv(message) {
     let space = document.getElementById("space-alert");
     space.insertAdjacentHTML("beforeend", buildAlert())
-    let hMessage = document.getElementById("message").innerHTML;
+    document.getElementById("message").innerHTML = message[0];
 }
 
 function buildAlert() {
@@ -93,6 +92,6 @@ function buildAlert() {
 
 function addRealNumber(cartNumber) {
     let element = document.getElementById("numberProd");
-    element.innerHTML = cartNumber;
+    element.innerHTML = cartNumber[1];
 
 }
