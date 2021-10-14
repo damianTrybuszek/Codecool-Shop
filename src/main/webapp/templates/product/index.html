@@ -34,171 +34,118 @@
     <!--  Fontello symbols End  -->
     <link rel="stylesheet" type="text/css" href="/static/css/custom.css"/>
 </head>
-
 <body>
+    <div class="container-fluid">
+        <nav class="top-bar fixed-top">
+            <div class="row-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="col">
+                        <a class="navbar-brand" href="/">CODECOOL SHOP</a>
+                    </div>
 
-<header>
-    <div class="thumbnail">
-        <!--    <h1>Codecool Shop</h1>-->
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid" style="align-content: center">
-                <div class="wb-name">
-                    <a href="/"><h1>Codecool Shop</h1></a>
-                </div>
-                <div class="nav-container">
-                    <div class="nav-content">
-                        <i class="icon-user"></i>
+                    <div class="col">
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </div>
                     </div>
-                    <div class="nav-content">
-                        <i class="icon-basket-1"><span id="numberProd" onchange="showProdNumber()"></span></i>
+
+                    <div class="col">
+                        <div class="btn-group">
+                            <a data-toggle="dropdown" href="#">
+                                <p>Category</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li th:each="category,iterStat : ${categories}">
+                                    <span th:if="${highlightedCategory == category.id}">
+                                        <strong>
+                                            <a class="dropdown-item" style="font-size: x-large"
+                                               th:href="@{'/category/'+${category.id}}"
+                                               th:text="${category.name}">Category Name
+                                            </a>
+                                        </strong>
+                                    </span>
+                                    <span th:unless="${highlightedCategory == category.id}">
+                                        <a class="dropdown-item" th:href="@{'/category/'+${category.id}}"
+                                           th:text="${category.name}">Category Name
+                                        </a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <a data-toggle="dropdown" href="#">
+                                <p>Supplier</p>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li th:each="supplier,iterStat : ${suppliers}">
+                                    <span th:if="${highlightedSupplier == supplier.id}">
+                                        <strong>
+                                            <a class="dropdown-item" style="font-size: x-large"
+                                               th:href="@{'/supplier/'+${supplier.id}}" th:text="${supplier.name}">Category Name
+                                            </a>
+                                        </strong>
+                                    </span>
+                                    <span th:unless="${highlightedSupplier == supplier.id}">
+                                            <a class="dropdown-item" th:href="@{'/supplier/'+${supplier.id}}"
+                                               th:text="${supplier.name}">Category Name
+                                            </a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="col-fluid">
+                        <div class="nav-content">
+                            <i class="icon-user"></i>
+                        </div>
+                        <div class="nav-content">
+                            <i class="icon-basket-1"><span id="numberProd" onchange="showProdNumber()"></span></i>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="row">
+                <div class="space-between" id="space-alert"></div>
             </div>
         </nav>
-    </div>
-</header>
-<div>
 
-</div>
-<nav id="nav-on-index">
-    <div class="category">
-        <div class="search-bar">
-            <form class="navbar-form pull-left" action="/search/" method="post">
-                <div id="set-input">
-                    <label>
-                        <input id="search-input" type="text" class="span2" placeholder="Search" name="phrase">
-                    </label>
-                </div>
-                <div id="set-button">
-                    <button id="search-submit" type="submit" class="btn-search"><i class="icon-search-outline"></i>
-                    </button>
-                </div>
-            </form>
-        </div>
-        <div class="btn-group">
-            <a data-toggle="dropdown" href="#">
-                <p>Category</p>
-                <!--                <span class="caret"></span>-->
-            </a>
-            <ul class="dropdown-menu">
-                <li th:each="category,iterStat : ${categories}">
-                        <span th:if="${highlightedCategory == category.id}">
-                            <strong><a class="dropdown-item" style="font-size: x-large"
-                                       th:href="@{'/category/'+${category.id}}"
-                                       th:text="${category.name}">Category Name</a></strong>
-                        </span>
-                    <span th:unless="${highlightedCategory == category.id}">
-                            <a class="dropdown-item" th:href="@{'/category/'+${category.id}}"
-                               th:text="${category.name}">
-                                Category Name
-                            </a>
-                        </span>
-                </li>
-            </ul>
-        </div>
-        <div class="btn-group">
-            <a data-toggle="dropdown" href="#">
-                <p>Supplier</p>
-                <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-                <li th:each="supplier,iterStat : ${suppliers}">
-                    <span th:if="${highlightedSupplier == supplier.id}">
-                        <strong><a class="dropdown-item" style="font-size: x-large"
-                                   th:href="@{'/supplier/'+${supplier.id}}" th:text="${supplier.name}">
-                            Category Name
-                        </a></strong>
-                    </span>
-                    <span th:unless="${highlightedSupplier == supplier.id}">
-                        <a class="dropdown-item" th:href="@{'/supplier/'+${supplier.id}}" th:text="${supplier.name}">
-                            Category Name
-                        </a>
-                    </span>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<div class="space-between" id="space-alert"></div>
-
-
-<span th:if="${searchedPhrase}">
-                            <h4 style="margin-left:50px">Searched Phrase:</h4>
-                            <strong><p style="font-size: x-large; margin-left:60px"
-                                       th:text="${searchedPhrase}">Searched phrase</p></strong>
-                        </span>
-<span th:unless="${searchedPhrase}"></span>
-<div class="space-between"></div>
-
-<!--<div>-->
-<!--    <h4>Cart:</h4>>-->
-<!--</div>>-->
-
-<div class="container">
-
-
-        <!--        <span th:if="${highlightedCategory == 0 and highlightedSupplier == 0}"><a th:href="@{/}">-->
-        <!--            <strong style="margin-left:20px; font-size: x-large" th:text="Home">Home</strong></a></span>-->
-        <!--        <span th:unless="${highlightedCategory == 0 and highlightedSupplier == 0}"><a th:href="@{/}">-->
-        <!--            <p style="font-size: x-large" th:text="Home">Category Title</p></a></span>-->
-
-        <!--        <div class="row row-2-column">-->
-        <!--            <div class="column column-1-of-2-left">-->
-        <!--                <h4 style="margin-left:20px">Categories:</h4>-->
-        <!--                <ul th:each="category,iterStat : ${categories}">-->
-        <!--                    <a th:href="@{'/category/'+${category.id}}">-->
-        <!--            <span th:if="${highlightedCategory == category.id}">-->
-        <!--            <strong><li th:text="${category.name}">Category Title</li></strong>-->
-        <!--            </span>-->
-        <!--                        <span th:unless="${highlightedCategory == category.id}">-->
-        <!--            <li th:text="${category.name}">Category Title</li>-->
-        <!--            </span>-->
-        <!--                    </a>-->
-        <!--                </ul>-->
-        <!--            </div>-->
-        <!--            <div class="column column-1-of-2-right">-->
-        <!--                <h4 style="margin-left:20px">Suppliers:</h4>-->
-        <!--                <ul th:each="supplier,iterStat : ${suppliers}">-->
-        <!--                    <a th:href="@{'/supplier/'+${supplier.id}}">-->
-        <!--            <span th:if="${highlightedSupplier == supplier.id}">-->
-        <!--            <strong><li th:text="${supplier.name}">Category Title</li></strong>-->
-        <!--            </span>-->
-        <!--                        <span th:unless="${highlightedSupplier == supplier.id}">-->
-        <!--            <li th:text="${supplier.name}">Category Title</li>-->
-        <!--            </span>-->
-        <!--                    </a>-->
-        <!--                </ul>-->
-        <!--            </div>-->
-
-        <!--        </div>-->
-        <!--    </div>-->
-
-        <div id="products" class="row">
-            <div class="col col-sm-12 col-md-6 col-lg-4" th:each="prod,iterStat : ${products}">
-                <div class="card">
-                    <img class="" src="http://placehold.it/400x250/000/fff"
-                         th:attr="src='/static/img/product_' + ${prod.id + 1} + '.jpg'" alt=""/>
-                    <div class="card-header">
-                        <h4 class="card-title" th:text="${prod.name}">Product name</h4>
-                        <p class="card-text" th:text="${prod.description}">Product description... </p>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-text">
-                            <p class="lead" th:text="${prod.getPrice()}">100 USD</p>
-                        </div>
-                        <div class="card-text">
-                            <button type="submit" class="btn btn-success" th:id="${prod.id}"
-                                    onclick="addProductToCart(this.id)">
-                                Add to cart
-                            </button>
+        <div class="row" style="margin-top: 120px;">
+            <div class="container" style="max-width: 80%;">
+                <div id="products" class="row">
+                    <div class="col-fluid col-sm-12 col-md-6 col-lg-4" th:each="prod,iterStat : ${products}">
+                        <div class="card fluid">
+                            <img class="" src="http://placehold.it/400x250/000/fff"
+                                 th:attr="src='/static/img/product_' + ${prod.id + 1} + '.jpg'" alt="" style="width:70%; height:70%; margin-left: 15%; max-height: 350px;"/>
+                            <div class="card-header">
+                                <h4 class="card-title" th:text="${prod.name}">Product name</h4>
+                                <p class="card-text" th:text="${prod.description}">Product description... </p>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <p class="lead" th:text="${prod.getPrice()}">100 USD</p>
+                                </div>
+                                <div class="card-text">
+                                    <button type="submit" class="btn btn-success" th:id="${prod.id}"
+                                            onclick="addProductToCart(this.id)">Add to cart
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 <div th:replace="footer.html :: copy"></div>
 </body>
 </html>
