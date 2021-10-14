@@ -35,6 +35,6 @@ function searchPhrase(){
 
   searchSubmitButton.addEventListener("click", function () {
     let searchPhrase = searchInputArea.value;
-    apiPost("/search/", searchPhrase);
+    apiPost("/search", searchPhrase);
   })
 }

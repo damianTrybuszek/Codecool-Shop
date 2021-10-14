@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba6d646d-ac5d-4eed-be7d-eeb5075f7c26" name="Changes" comment="new products">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/codecool/shop/dao/implementation/ProductDaoMemTest.java" afterDir="false" />
+    <list default="true" id="ba6d646d-ac5d-4eed-be7d-eeb5075f7c26" name="Changes" comment="search still doesnt fucking work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/config/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/config/Initializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/dao/implementation/ProductDaoMem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/dao/implementation/ProductDaoMem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/product/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/product/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +71,7 @@
       <recent name="com.codecool.shop.user" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProductDaoMemTest.test">
+  <component name="RunManager" selected="Maven.codecoolshop [jetty:run]">
     <configuration name="CustomerTest.t" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Codecool-Shop" />
       <extension name="coverage">
@@ -169,8 +165,8 @@
       <item itemvalue="JUnit.CustomerTest.t" />
       <item itemvalue="JUnit.ProductCategoryDaoMemTest.test" />
       <item itemvalue="JUnit.OrderTest.test" />
-      <item itemvalue="Maven.codecoolshop [jetty:run]" />
       <item itemvalue="JUnit.ProductDaoMemTest.test" />
+      <item itemvalue="Maven.codecoolshop [jetty:run]" />
     </list>
     <recent_temporary>
       <list>
@@ -195,7 +191,7 @@
       <workItem from="1633979415197" duration="6786000" />
       <workItem from="1634032806006" duration="1380000" />
       <workItem from="1634035544348" duration="551000" />
-      <workItem from="1634036416513" duration="11467000" />
+      <workItem from="1634036416513" duration="19203000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1633629537274</created>
@@ -288,7 +284,28 @@
       <option name="project" value="LOCAL" />
       <updated>1634054522617</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="search in products">
+      <created>1634057487224</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1634057487224</updated>
+    </task>
+    <task id="LOCAL-00015" summary="search in products backend">
+      <created>1634058641851</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1634058641851</updated>
+    </task>
+    <task id="LOCAL-00016" summary="search still doesnt fucking work">
+      <created>1634069876008</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1634069876008</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,13 +333,9 @@
     <MESSAGE value="added custom attribute to add to cart button in index.html" />
     <MESSAGE value="new categories, suppliers and products" />
     <MESSAGE value="new products" />
-    <option name="LAST_COMMIT_MESSAGE" value="new products" />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="MavenRunConfiguration">
-        <watch expression="data.stream().filter(t -&gt; t.getProductCategory().equals(productCategory)).collect(Collectors.toList());" language="JAVA" />
-      </configuration>
-    </watches-manager>
+    <MESSAGE value="search in products" />
+    <MESSAGE value="search in products backend" />
+    <MESSAGE value="search still doesnt fucking work" />
+    <option name="LAST_COMMIT_MESSAGE" value="search still doesnt fucking work" />
   </component>
 </project>
