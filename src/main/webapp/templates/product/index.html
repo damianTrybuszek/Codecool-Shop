@@ -61,9 +61,7 @@
 
 </div>
 <nav id="nav-on-index">
-    <!--    <div class="list-group-item">-->
     <div class="category">
-        <!--        <div id="empty"></div>-->
         <div class="search-bar">
             <form class="navbar-form pull-left" action="/search/" method="post">
                 <div id="set-input">
@@ -80,7 +78,6 @@
         <div class="btn-group">
             <a data-toggle="dropdown" href="#">
                 <p>Category</p>
-                <!--                <span class="caret"></span>-->
             </a>
             <ul class="dropdown-menu">
                 <li th:each="category,iterStat : ${categories}">
@@ -121,34 +118,9 @@
         </div>
     </div>
 </nav>
-<<<<<<< HEAD
-<div id="producs" class="row">
-    <div class="col col-sm-12 col-md-6 col-lg-4" th:each="prod,iterStat : ${prodInCart}">
-        <div class="card">
-            <img class="" src="http://placehold.it/400x250/000/fff"
-                 th:attr="src='/static/img/product_' + ${prod.id + 1} + '.jpg'" alt=""/>
-            <div class="card-header">
-                <h4 class="card-title" th:text="${prod.name}">Product name</h4>
-                <p class="card-text" th:text="${prod.description}">Product description... </p>
-            </div>
-            <div class="card-body">
-                <div class="card-text">
-                    <p class="lead" th:text="${prod.getPrice()}">100 USD</p>
-                </div>
-                <div class="card-text">
-                    <button type="submit" class="btn btn-success" th:id="${prod.id}"
-                            onclick="addProductToCart(this.id)">
-                        Add to cart
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
+
 <div class="space-between" id="space-alert"></div>
-=======
+
 
 <span th:if="${searchedPhrase}">
                             <h4 style="margin-left:50px">Searched Phrase:</h4>
@@ -157,7 +129,7 @@
                         </span>
 <span th:unless="${searchedPhrase}"></span>
 <div class="space-between"></div>
->>>>>>> 6758e4699745c5caf6ee7adfc91428b39583bfe5
+
 
 <!--<div>-->
 <!--    <h4>Cart:</h4>>-->
