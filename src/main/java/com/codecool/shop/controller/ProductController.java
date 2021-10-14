@@ -6,6 +6,7 @@ import com.codecool.shop.dao.SupplierDao;
 import com.codecool.shop.dao.implementation.ProductCategoryDaoMem;
 import com.codecool.shop.dao.implementation.ProductDaoMem;
 import com.codecool.shop.dao.implementation.SupplierDaoMem;
+import com.codecool.shop.model.Product;
 import com.codecool.shop.service.ProductService;
 import com.codecool.shop.config.TemplateEngineUtil;
 import org.thymeleaf.TemplateEngine;
@@ -17,6 +18,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 @WebServlet(urlPatterns = {"/", "/category/", "/supplier/", "/search/"})
 public class ProductController extends HttpServlet {
@@ -43,12 +47,7 @@ public class ProductController extends HttpServlet {
         } else if (element.contains("/supplier/")) {
             supplierId = Integer.parseInt(element.replaceAll("/supplier/", ""));
             context.setVariable("products", productService.getProductsForSupplier(supplierId));
-        } else if (element.contains("/search/")){
-            String phrase = String.valueOf(context.getResponse());//przyjąć response i odczytac w odpowiedni sposób
-            phrase = "X";
-            context.setVariable("products", (productDataStore.search(phrase)));
-        }
-        else {
+        } else {
             context.setVariable("products", productService.getAllProducts());
         }
         context.setVariable("highlightedCategory", categoryId);
@@ -63,4 +62,34 @@ public class ProductController extends HttpServlet {
         engine.process("product/index.html", context, resp.getWriter());
     }
 
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        super.doPost(req, resp);
+
+        ProductDao productDataStore = ProductDaoMem.getInstance();
+        ProductCategoryDao productCategoryDataStore = ProductCategoryDaoMem.getInstance();
+        SupplierDao supplierDao = SupplierDaoMem.getInstance();
+        ProductService productService = new ProductService(productDataStore, productCategoryDataStore, supplierDao);
+        String element = req.getRequestURI();
+        TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
+        WebContext context = new WebContext(req, resp, req.getServletContext());
+
+        if (element.contains("/search/")) {
+            String phrase = req.getParameter("phrase");
+            List<Product> searchingProducts = new ArrayList<>();
+            if (!phrase.equals("")) {
+                searchingProducts = productDataStore.search(phrase);
+            }
+            if (searchingProducts.size() > 0) {
+                context.setVariable("products", (searchingProducts));
+                context.setVariable("searchedPhrase", phrase);
+            } else {
+                resp.sendRedirect(resp.encodeRedirectURL(req.getContextPath() + "/"));
+            }
+
+        }
+        engine.process("product/index.html", context, resp.getWriter());
+
+    }
 }

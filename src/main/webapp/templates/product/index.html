@@ -65,10 +65,10 @@
     <div class="category">
         <!--        <div id="empty"></div>-->
         <div class="search-bar">
-            <form class="navbar-form pull-left" method="POST" action="/search/">
+            <form class="navbar-form pull-left" action="/search/" method="post">
                 <div id="set-input">
                     <label>
-                        <input id="search-input" type="text" class="span2" placeholder="Search">
+                        <input id="search-input" type="text" class="span2" placeholder="Search" name="phrase">
                     </label>
                 </div>
                 <div id="set-button">
@@ -121,6 +121,7 @@
         </div>
     </div>
 </nav>
+<<<<<<< HEAD
 <div id="producs" class="row">
     <div class="col col-sm-12 col-md-6 col-lg-4" th:each="prod,iterStat : ${prodInCart}">
         <div class="card">
@@ -147,6 +148,16 @@
 </div>
 </div>
 <div class="space-between" id="space-alert"></div>
+=======
+
+<span th:if="${searchedPhrase}">
+                            <h4 style="margin-left:50px">Searched Phrase:</h4>
+                            <strong><p style="font-size: x-large; margin-left:60px"
+                                       th:text="${searchedPhrase}">Searched phrase</p></strong>
+                        </span>
+<span th:unless="${searchedPhrase}"></span>
+<div class="space-between"></div>
+>>>>>>> 6758e4699745c5caf6ee7adfc91428b39583bfe5
 
 <!--<div>-->
 <!--    <h4>Cart:</h4>>-->
