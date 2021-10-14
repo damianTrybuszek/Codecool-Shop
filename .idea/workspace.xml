@@ -4,37 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba6d646d-ac5d-4eed-be7d-eeb5075f7c26" name="Changes" comment="new products">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_camel_camel_util_json_3_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_4_36_v20210114.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_ajax_9_4_36_v20210114.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/ProductQuantity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/codecoolshop_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/codecoolshop_war_exploded.xml" afterDir="false" />
+    <list default="true" id="ba6d646d-ac5d-4eed-be7d-eeb5075f7c26" name="Changes" comment="now it works">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/codecoolshop_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hotswap_agent.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_4_36_v20210114.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_ajax_9_4_36_v20210114.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20180130.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_2_0_0_alpha5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_2_0_0_alpha5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml~Stashed changes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codecoolshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/codecoolshop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/config/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/config/Initializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/dao/CartDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/dao/CartDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/dao/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/dao/implementation/CartDaoMem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/dao/implementation/CartDaoMem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/dao/implementation/ProductDaoMem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/dao/implementation/ProductDaoMem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/utill/HandlingJSonObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/utill/HandlingJSonObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/utill/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/utill/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/utill/ProductId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/utill/ProductId.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_13.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_14.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_15.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_16.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_17.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_18.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_18.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_19.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_19.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_20.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_21.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_21.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/img/product_9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/img/product_9.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/IndexWebSiteJS.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/IndexWebSiteJS.js" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/codecoolshop_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/codecoolshop_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/codecoolshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/codecoolshop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/custom.css" afterDir="false" />
->>>>>>> 6758e4699745c5caf6ee7adfc91428b39583bfe5
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/product/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/product/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/templates/product/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/templates/product/oldindex.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +60,9 @@
       <list>
         <option value="Interface" />
         <option value="JavaScript File" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -74,20 +89,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="node.js.detected.package.eslint" value="true" />
-<<<<<<< HEAD
-=======
-    <property name="node.js.detected.package.tslint" value="true" />
->>>>>>> 6758e4699745c5caf6ee7adfc91428b39583bfe5
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -155,7 +164,7 @@
       </method>
     </configuration>
     <configuration name="ProductDaoMemTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="codecoolshop" />
+      <module name="Codecool-Shop" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.codecool.shop.dao.implementation.*" />
@@ -225,10 +234,8 @@
       <workItem from="1633979415197" duration="6786000" />
       <workItem from="1634032806006" duration="1380000" />
       <workItem from="1634035544348" duration="551000" />
-      <workItem from="1634036416513" duration="11467000" />
-      <workItem from="1634074481123" duration="6731000" />
-      <workItem from="1634136203764" duration="9046000" />
-      <workItem from="1634211900772" duration="15257000" />
+      <workItem from="1634036416513" duration="19203000" />
+      <workItem from="1634237337394" duration="9162000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1633629537274</created>
@@ -321,7 +328,42 @@
       <option name="project" value="LOCAL" />
       <updated>1634054522617</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="search in products">
+      <created>1634057487224</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1634057487224</updated>
+    </task>
+    <task id="LOCAL-00015" summary="search in products backend">
+      <created>1634058641851</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1634058641851</updated>
+    </task>
+    <task id="LOCAL-00016" summary="search still doesnt fucking work">
+      <created>1634069876008</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1634069876008</updated>
+    </task>
+    <task id="LOCAL-00017" summary="now it works">
+      <created>1634237495996</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1634237495996</updated>
+    </task>
+    <task id="LOCAL-00018" summary="now it works">
+      <created>1634237538904</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1634237538904</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,22 +391,10 @@
     <MESSAGE value="added custom attribute to add to cart button in index.html" />
     <MESSAGE value="new categories, suppliers and products" />
     <MESSAGE value="new products" />
-    <option name="LAST_COMMIT_MESSAGE" value="new products" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/CartController.java</url>
-          <line>99</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/codecool/shop/controller/CartController.java</url>
-          <line>101</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="search in products" />
+    <MESSAGE value="search in products backend" />
+    <MESSAGE value="search still doesnt fucking work" />
+    <MESSAGE value="now it works" />
+    <option name="LAST_COMMIT_MESSAGE" value="now it works" />
   </component>
 </project>

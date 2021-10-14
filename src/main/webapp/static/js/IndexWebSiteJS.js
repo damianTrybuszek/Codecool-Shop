@@ -8,7 +8,7 @@ function addProductToCart(id) {
         setTimeout(function () {
             let empty = document.getElementById("alert-position");
             empty.remove();
-        }, 500);
+        }, 1000);
     })
 }
 
@@ -38,9 +38,8 @@ async function getData(url) {
     let response = await fetch(url, {
         method: "GET",
     })
-    if (response.status == 200) {
-        let data = await response.json()
-        return data
+    if (response.status === 200) {
+        return await response.json()
     } else {
         return error
     }
@@ -54,8 +53,7 @@ async function postData(url, bodyContent) {
         },
         body: JSON.stringify(bodyContent),
     });
-    const data = await response.json();
-    return data;
+    return await response.json();
 }
 
 async function deleteData(url) {
