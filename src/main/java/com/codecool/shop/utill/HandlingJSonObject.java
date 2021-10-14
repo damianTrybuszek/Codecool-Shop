@@ -25,15 +25,10 @@ public class HandlingJSonObject {
         if (jsonBody == null || jsonBody.trim().length() == 0) {
             System.out.println("Request is null");
         }
-        JSONObject jObj = new JSONObject(jsonBody);
-        return jObj;
+        return new JSONObject(jsonBody);
     }
 
-    public String makeJsonResponse(String key, String value)  {
-        Message message = new Message();
-        message.setKey(key);
-        message.setValue(value);
-        String jsonString = gson.toJson(message);
-        return jsonString;
+    public String makeJsonResponse(String message)  {
+        return gson.toJson(new Message(message));
     }
 }

@@ -4,6 +4,7 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.Currency;
+import java.util.Objects;
 
 public class Product extends BaseModel {
   private static int productsQuantity = 0;
@@ -27,6 +28,7 @@ public class Product extends BaseModel {
     this.defaultPrice = price;
     this.defaultCurrency = Currency.getInstance(currency);
   }
+
 
   public BigDecimal getDefaultPrice() {
     return defaultPrice;
@@ -61,6 +63,18 @@ public class Product extends BaseModel {
     return this.toStringSearch().toUpperCase().contains(searchPhrase.toUpperCase());
   }
 
+  public String toStringSearch() {
+    StringBuilder sb = new StringBuilder();
+    sb.append(this.id);
+    sb.append(this.name);
+    sb.append(this.defaultPrice);
+    sb.append(this.defaultCurrency.toString());
+    sb.append(this.productCategory.getName());
+    sb.append(this.supplier.getName());
+
+    return sb.toString();
+  }
+
   public Supplier getSupplier() {
     return supplier;
   }
@@ -86,15 +100,16 @@ public class Product extends BaseModel {
         this.supplier.getName());
   }
 
-  public String toStringSearch() {
-    StringBuilder sb = new StringBuilder();
-    sb.append(this.id);
-    sb.append(this.name);
-    sb.append(this.defaultPrice);
-    sb.append(this.defaultCurrency.toString());
-    sb.append(this.productCategory.getName());
-    sb.append(this.supplier.getName());
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Product product = (Product) o;
+    return id == product.id;
+  }
 
-    return sb.toString();
+  @Override
+  public int hashCode() {
+    return Objects.hash(id);
   }
 }

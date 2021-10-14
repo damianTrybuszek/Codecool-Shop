@@ -1,16 +1,24 @@
 package com.codecool.shop.controller;
 
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 
+import com.codecool.shop.config.TemplateEngineUtil;
 import com.codecool.shop.dao.ProductDao;
 import com.codecool.shop.dao.implementation.CartDaoMem;
 import com.codecool.shop.dao.implementation.ProductDaoMem;
+import com.codecool.shop.model.Product;
 import com.codecool.shop.utill.HandlingJSonObject;
+import com.codecool.shop.utill.Message;
 import com.google.gson.Gson;
 import org.json.JSONObject;
-
+import com.codecool.shop.utill.HandlingJSonObject;
+import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.context.WebContext;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -18,49 +26,94 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.util.*;
 
-@WebServlet(urlPatterns = {"/cart"})
+@WebServlet(urlPatterns = {"/cart", "/cart-items"})
 public class CartController extends HttpServlet {
     ProductDao productDataStore = ProductDaoMem.getInstance();
     CartDaoMem cartDaoMem = CartDaoMem.getInstance();
-//    ProductId productId = new ProductId();
+    Gson gson = new Gson();
+
+
+
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
+        WebContext context = new WebContext(req, resp, req.getServletContext());
+        RequestDispatcher dispatcher = req.getRequestDispatcher("webapp/templates/product/index.html");
+        PrintWriter out = resp.getWriter();
+        String element = req.getRequestURI();
+
+        String cartString = gson.toJson(cartDaoMem.getCart());
+
+        System.out.println(cartString);
+
+        if (element.contains("/cart-items")) {
+            if (cartDaoMem.getProductString() != null) {
+                HashMap<String, String> productInCart = cartDaoMem.getProductString();
+                HashMap<String, String> quantityProd = cartDaoMem.getQuantityProd();
+
+                System.out.println(productInCart);
+                System.out.println(quantityProd);
+
+
+//                String cartString = gson.toJson(cartDaoMem.getCart());
+
+                System.out.println(cartString);
+                JSONObject jsonProdInCart = new JSONObject(productInCart);
+                JSONObject jsonQuantityProd = new JSONObject(quantityProd);
+
+                resp.setStatus(200);
+                resp.setContentType("application/json");
+                resp.setCharacterEncoding("UTF-8");
+                out.print(jsonProdInCart);
+                out.print(jsonQuantityProd);
+
+                dispatcher.forward(req, resp);
+
+            }
+
+
+        } else if (element.contains("/cart")) {
+            int numberProd = cartDaoMem.countProduct();
+            resp.setStatus(200);
+            resp.setContentType("application/json");
+            resp.setCharacterEncoding("UTF-8");
+            JSONObject jsonNumber = new JSONObject(String.valueOf(numberProd));
+            out.print(jsonNumber);
+
+        }
+        dispatcher.forward(req, resp);
+    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        RequestDispatcher dispatcher = req.getRequestDispatcher("webapp/templates/product/index.html");
         PrintWriter out = resp.getWriter();
-        Gson gson = new Gson();
+
         HandlingJSonObject hJson = new HandlingJSonObject();
-
-
         JSONObject dataFromReq = hJson.getJsonFromRequest(req);
-//        while (it.hasNext()) {
-//            String key = it.next();
-//            Object o = jObj.get(key);
-//            System.out.println(key + " : " + o);
-//        }
 
-
-
-        System.out.println(dataFromReq.get("productId"));
         int productId = Integer.parseInt(String.valueOf(dataFromReq.get("productId")));
         if (productDataStore.getAll().contains(productDataStore.find(productId))) {
             cartDaoMem.add(productDataStore.find(productId));
 
+//            String cartString = gson.toJson(cartDaoMem.getQuantity());
+//
+//            System.out.println(cartString);
+
+            System.out.println(cartDaoMem.getCart());
+            int numberProd = cartDaoMem.countProduct();
+            System.out.println(numberProd);
             resp.setStatus(200);
             resp.setContentType("application/json");
             resp.setCharacterEncoding("UTF-8");
-            out.write(hJson.makeJsonResponse("Add to cart", "Add to basket"));
-            resp.sendRedirect("/");
-
-        } else {
-            resp.sendError(404);
+            out.print(numberProd);
 
         }
-
-
-
-        super.doPost(req, resp);
+//        resp.sendRedirect("/");
     }
 
+    // Function can read request from Http
     static String extractPostRequestBody(HttpServletRequest request) {
         if ("POST".equalsIgnoreCase(request.getMethod())) {
             Scanner s = null;
