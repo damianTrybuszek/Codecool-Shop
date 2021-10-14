@@ -4,6 +4,7 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.Currency;
+import java.util.Objects;
 
 public class Product extends BaseModel {
   private static int productsQuantity = 0;
@@ -27,6 +28,7 @@ public class Product extends BaseModel {
     this.defaultPrice = price;
     this.defaultCurrency = Currency.getInstance(currency);
   }
+
 
   public BigDecimal getDefaultPrice() {
     return defaultPrice;
@@ -96,5 +98,18 @@ public class Product extends BaseModel {
         this.defaultCurrency.toString(),
         this.productCategory.getName(),
         this.supplier.getName());
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Product product = (Product) o;
+    return id == product.id;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id);
   }
 }

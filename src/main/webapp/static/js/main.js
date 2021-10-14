@@ -1,15 +1,15 @@
-addProductToCart();
+// addProductToCart();
 searchPhrase();
 
-function addProductToCart() {
-  let buttons = document.getElementsByClassName("btn-success");
-  for (let button of buttons) {
-    button.addEventListener("click", async function () {
-      let productId = button.getAttribute("product-id");
-      await addProductToCartRequest({productId: productId});
-    })
-  }
-}
+// function addProductToCart() {
+//   let buttons = document.getElementsByClassName("btn-success");
+//   for (let button of buttons) {
+//     button.addEventListener("click", async function () {
+//       let productId = button.getAttribute("product-id");
+//       await addProductToCartRequest({productId: productId});
+//     })
+//   }
+// }
 
 async function addProductToCartRequest(productId) {
   return await apiPost('/#', productId);

@@ -146,8 +146,9 @@ a:hover{
     margin-top: 3px;
 }
 .space-between{
-    height: 100px;
-    width: 50px;
+    height: 200px;
+    width: 100vw;
+    justify-content: center;
 }
 
 
@@ -174,6 +175,13 @@ a:hover{
 .badge {
     float: left;
 }
+/* Alert */
+#alert-position {
+    height: 50px;
+    width: 100vw;
+    text-align: center;
+}
+
 
 
 
