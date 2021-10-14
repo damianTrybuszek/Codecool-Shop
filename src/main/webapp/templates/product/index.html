@@ -50,22 +50,23 @@
                         <i class="icon-user"></i>
                     </div>
                     <div class="nav-content">
-                        <i class="icon-basket-1"></i>
+                        <i class="icon-basket-1"><span id="numberProd" onchange="showProdNumber()"></span></i>
                     </div>
                 </div>
             </div>
         </nav>
     </div>
 </header>
+<div>
+
+</div>
 <nav id="nav-on-index">
-    <!--    <div class="list-group-item">-->
     <div class="category">
-        <!--        <div id="empty"></div>-->
         <div class="search-bar">
-            <form class="navbar-form pull-left" method="POST" action="/search">
+            <form class="navbar-form pull-left" action="/search/" method="post">
                 <div id="set-input">
                     <label>
-                        <input id="search-input" type="text" class="span2" placeholder="Search">
+                        <input id="search-input" type="text" class="span2" placeholder="Search" name="phrase">
                     </label>
                 </div>
                 <div id="set-button">
@@ -118,6 +119,16 @@
         </div>
     </div>
 </nav>
+
+<div class="space-between" id="space-alert"></div>
+
+
+<span th:if="${searchedPhrase}">
+                            <h4 style="margin-left:50px">Searched Phrase:</h4>
+                            <strong><p style="font-size: x-large; margin-left:60px"
+                                       th:text="${searchedPhrase}">Searched phrase</p></strong>
+                        </span>
+<span th:unless="${searchedPhrase}"></span>
 <div class="space-between"></div>
 
 <!--<div>-->
@@ -125,7 +136,7 @@
 <!--</div>>-->
 
 <div class="container">
-    <div class="card">
+
 
         <!--        <span th:if="${highlightedCategory == 0 and highlightedSupplier == 0}"><a th:href="@{/}">-->
         <!--            <strong style="margin-left:20px; font-size: x-large" th:text="Home">Home</strong></a></span>-->
@@ -177,12 +188,10 @@
                             <p class="lead" th:text="${prod.getPrice()}">100 USD</p>
                         </div>
                         <div class="card-text">
-                            <form method="post" action="/cart">
-                                <button type="submit" class="btn btn-success" th:id="${prod.id}"
-                                        onclick="addProductToCart(this.id)">
-                                    Add to cart
-                                </button>
-                            </form>
+                            <button type="submit" class="btn btn-success" th:id="${prod.id}"
+                                    onclick="addProductToCart(this.id)">
+                                Add to cart
+                            </button>
                         </div>
                     </div>
                 </div>

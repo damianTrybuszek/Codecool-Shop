@@ -2,11 +2,13 @@ package com.codecool.shop.dao.implementation;
 
 import com.codecool.shop.dao.CartDao;
 import com.codecool.shop.model.Product;
+import com.codecool.shop.model.ProductQuantity;
 
-import java.util.HashMap;
-import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+import java.util.*;
 
 public class CartDaoMem implements CartDao {
+
     private Map<Product, Integer> cart = new HashMap<>();
     private static CartDaoMem instance = null;
 
@@ -21,14 +23,26 @@ public class CartDaoMem implements CartDao {
     @Override
     public void add(Product product) {
 
-        for(Product prod: cart.keySet()) {
-            if(product.equals(prod)){
-                int numberOfItem = cart.get(prod);
-                cart.replace(prod, numberOfItem + 1);
-            } else {
-                cart.put(product, 1);
-            }
-        }
+      int count = cart.getOrDefault(product, 0);
+
+      cart.put(product, count + 1);
+
+
+//        if (cart.containsKey(product)) {
+//          int count = cart.get(product);
+//          cart.put(product, count + 1);
+//      } else {
+//          cart.put(product, 1);
+//      }
+
+//        for(Product prod: cart.keySet()) {
+//            if(product.equals(prod)){
+//                int numberOfItem = cart.get(prod);
+//                cart.replace(prod, numberOfItem + 1);
+//            } else {
+//                cart.put(product, 1);
+//            }
+//        }
     }
 
     @Override
@@ -47,11 +61,57 @@ public class CartDaoMem implements CartDao {
     public int countProduct() {
         int counter = 0;
 
+
         if(!cart.isEmpty()) {
             for (Product prod : cart.keySet()) {
-                counter++;
+                int numberOfProduct = cart.get(prod);
+                counter = counter + numberOfProduct;
             }
         }
         return counter;
     }
+
+    @Override
+    public HashMap<String, String> getProductString() {
+//        List<String> stringProductMap = new HashMap<>();
+//        int counter = 1;
+//        if(!cart.isEmpty()) {
+//            for (Product prod : cart.keySet()) {
+//                stringProductMap.put("prod" + counter, prod.toString());
+//                counter++;
+//            }
+//
+//        } else {
+//            return null;
+//        }
+        return null;
+    }
+
+    @Override
+    public HashMap<String, String> getQuantityProd(){
+        HashMap<String, String> quantityProd = new HashMap<>();
+        int counter = 1;
+        if(!cart.isEmpty()) {
+            for (int quantity:cart.values()){
+                quantityProd.put(String.valueOf("quantity" + counter), String.valueOf(quantity));
+            }
+        } else {
+            return null;
+        }
+        return quantityProd;
+    }
+
+    //        while (it.hasNext()) {
+//            String key = it.next();
+//            Object o = jObj.get(key);
+//            System.out.println(key + " : " + o);
+//        }
+    public List<ProductQuantity> getQuantity() {
+        List<ProductQuantity> prod = new ArrayList<>();
+        for (Product product:cart.keySet()){
+            prod.add(new ProductQuantity(product, cart.get(product)));
+        }
+        return prod;
+    }
+
 }

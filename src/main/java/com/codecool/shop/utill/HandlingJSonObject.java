@@ -1,5 +1,6 @@
 package com.codecool.shop.utill;
 
+import com.codecool.shop.utill.Message;
 import com.google.gson.Gson;
 import org.json.JSONObject;
 
@@ -27,10 +28,7 @@ public class HandlingJSonObject {
         return new JSONObject(jsonBody);
     }
 
-    public String makeJsonResponse(String key, String value)  {
-        Message message = new Message();
-        message.setKey(key);
-        message.setValue(value);
-        return gson.toJson(message);
+    public String makeJsonResponse(String message)  {
+        return gson.toJson(new Message(message));
     }
 }

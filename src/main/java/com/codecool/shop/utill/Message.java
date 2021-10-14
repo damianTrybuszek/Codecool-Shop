@@ -1,22 +1,15 @@
 package com.codecool.shop.utill;
 
 public class Message {
-    private String key = null;
-    private String value = null;
+    private String message;
 
-    public String getKey() {
-        return key;
+
+    public Message(String message){
+        this.message = message;
     }
 
-    public String getValue() {
-        return value;
+    public String getMessage() {
+        return message;
     }
 
-    public void setKey(String key) {
-        this.key = key;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
 }
