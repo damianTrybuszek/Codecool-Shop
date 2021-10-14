@@ -61,9 +61,11 @@ public class CartDaoMem implements CartDao {
     public int countProduct() {
         int counter = 0;
 
+
         if(!cart.isEmpty()) {
             for (Product prod : cart.keySet()) {
-                counter++;
+                int numberOfProduct = cart.get(prod);
+                counter = counter + numberOfProduct;
             }
         }
         return counter;
