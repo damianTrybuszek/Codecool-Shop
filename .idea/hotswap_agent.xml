@@ -2,10 +2,5 @@
 <project version="4">
   <component name="HotSwapAgentPluginSettingsProvider">
     <option name="agentPath" value="$APPLICATION_PLUGINS_DIR$/hotswap-agent-intellij-plugin/lib/agent/hotswap-agent-1.4.1.jar" />
-    <option name="selectedRunConfigurations">
-      <set>
-        <option value="codecoolshop [jetty:run]" />
-      </set>
-    </option>
   </component>
 </project>

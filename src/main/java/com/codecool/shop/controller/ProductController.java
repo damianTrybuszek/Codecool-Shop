@@ -77,6 +77,8 @@ public class ProductController extends HttpServlet {
         String element = req.getRequestURI();
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(req.getServletContext());
         WebContext context = new WebContext(req, resp, req.getServletContext());
+        context.setVariable("categories", productService.getAllProductCategory());
+        context.setVariable("suppliers", productService.getAllSuppliers());
 
         if (element.contains("/search/")) {
             String phrase = req.getParameter("phrase");

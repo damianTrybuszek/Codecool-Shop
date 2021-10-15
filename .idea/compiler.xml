@@ -8,12 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="codecoolshop" />
-        <module name="Codecool-Shop" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Codecool-Shop" target="11" />
-      <module name="codecoolshop" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>

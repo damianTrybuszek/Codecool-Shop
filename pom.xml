@@ -45,11 +45,11 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.4.36.v20210114</version>
                 <configuration>
-<!--                    &lt;!&ndash; On some configs this causes shutdown of context on &ndash;&gt;-->
-<!--                    &lt;!&ndash; a page load so disabled. &ndash;&gt;-->
+                    <!--                    &lt;!&ndash; On some configs this causes shutdown of context on &ndash;&gt;-->
+                    <!--                    &lt;!&ndash; a page load so disabled. &ndash;&gt;-->
 
-<!--                     <reload>automatic</reload>-->
-<!--                     <scanIntervalSeconds>1</scanIntervalSeconds>-->
+                    <!--                     <reload>automatic</reload>-->
+                    <!--                     <scanIntervalSeconds>1</scanIntervalSeconds>-->
 
                 </configuration>
             </plugin>
@@ -113,10 +113,10 @@
             <artifactId>jetty-util-ajax</artifactId>
             <version>9.4.36.v20210114</version>
         </dependency>
-      <dependency>
-        <groupId>org.apache.camel</groupId>
-        <artifactId>camel-util-json</artifactId>
-        <version>3.11.2</version>
-      </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-util-json</artifactId>
+            <version>3.11.2</version>
+        </dependency>
     </dependencies>
 </project>
