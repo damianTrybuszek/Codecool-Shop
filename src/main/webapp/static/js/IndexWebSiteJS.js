@@ -15,12 +15,12 @@ function addProductToCart(id) {
     let productId = element.getAttribute("id")
 
     sendProductToCart(productId).then(number => {
-        addRealNumber(number)
+        // addRealNumber(number)
         addAlertDiv()
         setTimeout(function () {
             let empty = document.getElementById("alert-position");
             empty.remove();
-        }, 500);
+        }, 1000);
     })
 }
 
