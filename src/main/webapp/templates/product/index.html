@@ -33,7 +33,10 @@
     <link rel="stylesheet" type="text/css" href="/static/img/fontello-a5fc62e0/css/to_codecoolshop.css">
     <!--  Fontello symbols End  -->
     <link rel="stylesheet" type="text/css" href="/static/css/custom.css"/>
+    <!--  SCSS cart drop down -->
+    <link rel="stylesheet" type="text/css" href="/static/css/basket.scss">
 </head>
+
 <body>
     <div class="container-fluid" style="width: 80%;">
         <nav class="top-bar fixed-top">
@@ -108,7 +111,7 @@
                             <i class="icon-user"></i>
                         </div>
                         <div class="nav-content">
-                            <i class="icon-basket-1"><span id="numberProd" onchange="showProdNumber()"></span></i>
+                            <i class="icon-basket-1" onclick="getProduct()" id="dropCart"><span class="badge" id="badge-web"></span></i>
                         </div>
                     </div>
                 </nav>
@@ -136,7 +139,8 @@
                                 </div>
                                 <div class="card-text">
                                     <button type="submit" class="btn btn-success" th:id="${prod.id}"
-                                            onclick="addProductToCart(this.id)">Add to cart
+                                            onclick="addProductToCart(this.id)">
+                                        Add to cart
                                     </button>
                                 </div>
                             </div>
@@ -147,5 +151,6 @@
         </div>
     </div>
 <div th:replace="footer.html :: copy"></div>
+
 </body>
 </html>
