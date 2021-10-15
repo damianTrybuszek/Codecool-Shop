@@ -1,14 +1,8 @@
-
 setInterval(() => {
     getData("/cart").then(numberProductCart => {
         addRealNumber(numberProductCart)
     })
 }, 200)
-
-
-
-
-
 
 function addProductToCart(id) {
     let element = document.getElementById(id)
@@ -20,11 +14,9 @@ function addProductToCart(id) {
         setTimeout(function () {
             let empty = document.getElementById("alert-position");
             empty.remove();
-        }, 1000);
+        }, 1500);
     })
 }
-
-
 
 function getProduct() {
     getData("/cart-items").then(productList =>{
@@ -51,7 +43,6 @@ function sendProductToCart(productId) {
 
 }
 
-
 // function getData(){
 //     let response = getData("/cart");
 //     return response;
@@ -62,7 +53,7 @@ async function getData(url) {
     let response = await fetch(url, {
         method: "GET",
     })
-    if (response.status == 200) {
+    if (response.status === 200) {
         let data = await response.json()
         console.log(data)
         return data
@@ -112,8 +103,8 @@ function addAlertDiv() {
 
 function buildAlert() {
     return ' <div class="alert alert-success" role="alert" id="alert-position">' +
-        ' <strong></strong><p id="message">Product Added</p></strong> ' +
-        '</div> '
+      ' <strong></strong><p id="message">Product succesfully added!</p></strong> ' +
+      '</div> '
 }
 
 function addRealNumber(cartNumber) {
@@ -122,6 +113,7 @@ function addRealNumber(cartNumber) {
 
 
 }
+
 function makeDropCart() {
     let basket = document.getElementById("dropCart");
     basket.insertAdjacentHTML("beforeend", buildDropDownBasket());
@@ -148,7 +140,6 @@ function sumPrice(productList) {
     }
     return count;
 }
-
 
 function buildDropDownBasket() {
     return '<div class="shopping-cart">' +

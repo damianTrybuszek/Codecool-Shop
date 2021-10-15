@@ -16,3 +16,4 @@ README.md
 /src/test/java/com/codecool/shop/user/CustomerTest.java
 /src/test/java/com/codecool/shop/dao/implementation/ProductCategoryDaoMemTest.java
 .idea
+/.idea/
