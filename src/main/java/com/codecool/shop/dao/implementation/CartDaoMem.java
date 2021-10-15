@@ -107,11 +107,14 @@ public class CartDaoMem implements CartDao {
 //            System.out.println(key + " : " + o);
 //        }
     public List<ProductQuantity> getQuantity() {
-        List<ProductQuantity> prod = new ArrayList<>();
+        List<ProductQuantity> ListToJsonProduct = new ArrayList<>();
         for (Product product:cart.keySet()){
-            prod.add(new ProductQuantity(product, cart.get(product)));
+            ListToJsonProduct.add(new ProductQuantity(product.getId(), product.getName(), product.getDefaultPrice(),
+                    product.getDefaultCurrency().getSymbol(), product.getProductCategory().getName(),
+                    product.getSupplier().getName(), cart.get(product)
+            ));
         }
-        return prod;
+        return ListToJsonProduct;
     }
 
 }

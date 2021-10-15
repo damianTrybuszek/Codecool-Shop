@@ -33,8 +33,6 @@
     <link rel="stylesheet" type="text/css" href="/static/img/fontello-a5fc62e0/css/to_codecoolshop.css">
     <!--  Fontello symbols End  -->
     <link rel="stylesheet" type="text/css" href="/static/css/custom.css"/>
-    <!--  SCSS cart drop down -->
-    <link rel="stylesheet" type="text/css" href="/static/css/basket.scss">
 </head>
 
 <body>
@@ -52,7 +50,7 @@
                         <i class="icon-user"></i>
                     </div>
                     <div class="nav-content">
-                        <i class="icon-basket-1" onclick="getProduct()" id="dropCart"><span class="badge" id="badge-web"></span></i>
+                        <i class="icon-basket-1"><span id="numberProd" onchange="showProdNumber()"></span></i>
                     </div>
                 </div>
             </div>
@@ -138,63 +136,24 @@
 <!--</div>>-->
 
 <div class="container">
-
-
-<!--        <span th:if="${highlightedCategory == 0 and highlightedSupplier == 0}"><a th:href="@{/}">-->
-<!--            <strong style="margin-left:20px; font-size: x-large" th:text="Home">Home</strong></a></span>-->
-<!--        <span th:unless="${highlightedCategory == 0 and highlightedSupplier == 0}"><a th:href="@{/}">-->
-<!--            <p style="font-size: x-large" th:text="Home">Category Title</p></a></span>-->
-
-<!--        <div class="row row-2-column">-->
-<!--            <div class="column column-1-of-2-left">-->
-<!--                <h4 style="margin-left:20px">Categories:</h4>-->
-<!--                <ul th:each="category,iterStat : ${categories}">-->
-<!--                    <a th:href="@{'/category/'+${category.id}}">-->
-<!--            <span th:if="${highlightedCategory == category.id}">-->
-<!--            <strong><li th:text="${category.name}">Category Title</li></strong>-->
-<!--            </span>-->
-<!--                        <span th:unless="${highlightedCategory == category.id}">-->
-<!--            <li th:text="${category.name}">Category Title</li>-->
-<!--            </span>-->
-<!--                    </a>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--            <div class="column column-1-of-2-right">-->
-<!--                <h4 style="margin-left:20px">Suppliers:</h4>-->
-<!--                <ul th:each="supplier,iterStat : ${suppliers}">-->
-<!--                    <a th:href="@{'/supplier/'+${supplier.id}}">-->
-<!--            <span th:if="${highlightedSupplier == supplier.id}">-->
-<!--            <strong><li th:text="${supplier.name}">Category Title</li></strong>-->
-<!--            </span>-->
-<!--                        <span th:unless="${highlightedSupplier == supplier.id}">-->
-<!--            <li th:text="${supplier.name}">Category Title</li>-->
-<!--            </span>-->
-<!--                    </a>-->
-<!--                </ul>-->
-<!--            </div>-->
-
-<!--        </div>-->
-<!--    </div>-->
-
-        <div id="products" class="row">
-            <div class="col col-sm-12 col-md-6 col-lg-4" th:each="prod,iterStat : ${products}">
-                <div class="card">
-                    <img class="" src="http://placehold.it/400x250/000/fff"
-                         th:attr="src='/static/img/product_' + ${prod.id + 1} + '.jpg'" alt=""/>
-                    <div class="card-header">
-                        <h4 class="card-title" th:text="${prod.name}">Product name</h4>
-                        <p class="card-text" th:text="${prod.description}">Product description... </p>
+    <div id="products" class="row">
+        <div class="col col-sm-12 col-md-6 col-lg-4" th:each="prod,iterStat : ${products}">
+            <div class="card">
+                <img class="" src="http://placehold.it/400x250/000/fff"
+                     th:attr="src='/static/img/product_' + ${prod.id + 1} + '.jpg'" alt=""/>
+                <div class="card-header">
+                    <h4 class="card-title" th:text="${prod.name}">Product name</h4>
+                    <p class="card-text" th:text="${prod.description}">Product description... </p>
+                </div>
+                <div class="card-body">
+                    <div class="card-text">
+                        <p class="lead" th:text="${prod.getPrice()}">100 USD</p>
                     </div>
-                    <div class="card-body">
-                        <div class="card-text">
-                            <p class="lead" th:text="${prod.getPrice()}">100 USD</p>
-                        </div>
-                        <div class="card-text">
-                            <button type="submit" class="btn btn-success" th:id="${prod.id}"
-                                    onclick="addProductToCart(this.id)">
-                                Add to cart
-                            </button>
-                        </div>
+                    <div class="card-text">
+                        <button type="submit" class="btn btn-success" th:id="${prod.id}"
+                                onclick="addProductToCart(this.id)">
+                            Add to cart
+                        </button>
                     </div>
                 </div>
             </div>
