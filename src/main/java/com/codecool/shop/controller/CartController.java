@@ -1,26 +1,32 @@
 package com.codecool.shop.controller;
 
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
 import com.codecool.shop.config.TemplateEngineUtil;
 import com.codecool.shop.dao.ProductDao;
 import com.codecool.shop.dao.implementation.CartDaoMem;
 import com.codecool.shop.dao.implementation.ProductDaoMem;
+import com.codecool.shop.model.Product;
+import com.codecool.shop.model.ProductQuantity;
 import com.codecool.shop.utill.HandlingJSonObject;
+import com.codecool.shop.utill.Message;
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import org.json.JSONObject;
+import com.codecool.shop.utill.HandlingJSonObject;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.WebContext;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 @WebServlet(urlPatterns = {"/cart", "/cart-items"})
 public class CartController extends HttpServlet {
@@ -39,33 +45,29 @@ public class CartController extends HttpServlet {
         PrintWriter out = resp.getWriter();
         String element = req.getRequestURI();
 
-        String cartString = gson.toJson(cartDaoMem.getCart());
-
-        System.out.println(cartString);
+//        String cartString = gson.toJson(cartDaoMem.getCart());
+//
+//        System.out.println(cartString);
 
         if (element.contains("/cart-items")) {
-            if (cartDaoMem.getProductString() != null) {
-                HashMap<String, String> productInCart = cartDaoMem.getProductString();
-                HashMap<String, String> quantityProd = cartDaoMem.getQuantityProd();
+            if (!cartDaoMem.getCart().isEmpty()) {
+                List<ProductQuantity> productToJson = cartDaoMem.getQuantity();
 
-                System.out.println(productInCart);
-                System.out.println(quantityProd);
+//                System.out.println(productInCart);
+//                System.out.println(quantityProd)
+                System.out.println(productToJson);
 
-
-//                String cartString = gson.toJson(cartDaoMem.getCart());
+                String cartString = gson.toJson(cartDaoMem.getQuantity());
 
                 System.out.println(cartString);
-                JSONObject jsonProdInCart = new JSONObject(productInCart);
-                JSONObject jsonQuantityProd = new JSONObject(quantityProd);
+//                JSONObject jsonProdInCart = new JSONObject(productInCart);
+//                JSONObject jsonQuantityProd = new JSONObject(quantityProd);
 
                 resp.setStatus(200);
                 resp.setContentType("application/json");
                 resp.setCharacterEncoding("UTF-8");
-                out.print(jsonProdInCart);
-                out.print(jsonQuantityProd);
-
-                dispatcher.forward(req, resp);
-
+                out.print(cartString);
+//                dispatcher.forward(req, resp);
             }
 
 
@@ -74,16 +76,16 @@ public class CartController extends HttpServlet {
             resp.setStatus(200);
             resp.setContentType("application/json");
             resp.setCharacterEncoding("UTF-8");
-            JSONObject jsonNumber = new JSONObject(String.valueOf(numberProd));
-            out.print(jsonNumber);
+
+            out.print(numberProd);
 
         }
-        dispatcher.forward(req, resp);
+//        dispatcher.forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher dispatcher = req.getRequestDispatcher("webapp/templates/product/oldindex.html");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("webapp/templates/product/index.html");
         PrintWriter out = resp.getWriter();
 
         HandlingJSonObject hJson = new HandlingJSonObject();
@@ -97,13 +99,21 @@ public class CartController extends HttpServlet {
 //
 //            System.out.println(cartString);
 
-            System.out.println(cartDaoMem.getCart());
+//            System.out.println(cartDaoMem.getCart());
             int numberProd = cartDaoMem.countProduct();
             System.out.println(numberProd);
             resp.setStatus(200);
             resp.setContentType("application/json");
             resp.setCharacterEncoding("UTF-8");
-            out.print(numberProd);
+            String message = "Product in Cart";
+
+            JsonArray jsonArray= new JsonArray();
+            jsonArray.add(message);
+            jsonArray.add(numberProd);
+            System.out.println(jsonArray);
+
+            out.print(jsonArray);
+
 
         }
 //        resp.sendRedirect("/");
