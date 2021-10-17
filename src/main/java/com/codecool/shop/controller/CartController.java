@@ -45,17 +45,11 @@ public class CartController extends HttpServlet {
         PrintWriter out = resp.getWriter();
         String element = req.getRequestURI();
 
-//        String cartString = gson.toJson(cartDaoMem.getCart());
-//
-//        System.out.println(cartString);
-
         if (element.contains("/cart-items")) {
             if (!cartDaoMem.getCart().isEmpty()) {
                 List<ProductQuantity> productToJson = cartDaoMem.getQuantity();
 
-//                System.out.println(productInCart);
-//                System.out.println(quantityProd)
-                System.out.println(productToJson);
+//                System.out.println(productToJson);
 
                 String cartString = gson.toJson(cartDaoMem.getQuantity());
 
@@ -67,7 +61,6 @@ public class CartController extends HttpServlet {
                 resp.setContentType("application/json");
                 resp.setCharacterEncoding("UTF-8");
                 out.print(cartString);
-//                dispatcher.forward(req, resp);
             }
 
 
@@ -80,7 +73,6 @@ public class CartController extends HttpServlet {
             out.print(numberProd);
 
         }
-//        dispatcher.forward(req, resp);
     }
 
     @Override
