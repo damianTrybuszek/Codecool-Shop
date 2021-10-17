@@ -73,11 +73,11 @@
 .shopping-cart-header {
     border-bottom: 1px solid #E8E8E8;
     padding-bottom: 15px;
+    display: inline-block;
 
 
 }
 .shopping-cart-total {
-    float: right;
 }
 
 #li-cart {
@@ -174,4 +174,28 @@
     content: "";
     display: table;
     clear: both;
+}
+#numberProdDrop {
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    padding: 3px 7px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+#sum-cart{
+    background-color: goldenrod;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    padding: 3px 7px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
 }
