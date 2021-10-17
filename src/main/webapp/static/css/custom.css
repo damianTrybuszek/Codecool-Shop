@@ -118,7 +118,7 @@ a:hover{
     margin-top: 3px;
     float: left;
     height: 35px;
-    width: 158px;
+    width: 250px;
 }
 .btn-search{
     text-align: center;
@@ -173,7 +173,7 @@ a:hover{
     float: left;
 }
 .badge {
-    float: left;
+
 }
 
 /* Alert */
@@ -195,5 +195,10 @@ a:hover{
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
+}
+.dropdown-menu {
+    height: 500px;
+    width: 350px;
+    overflow-y: scroll;
 }
 

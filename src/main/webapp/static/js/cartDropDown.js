@@ -1,4 +1,7 @@
 
+$("#basket-dropdown").dropdown({
+    offset: 'auto'
+})
 
 function getProduct() {
 
@@ -31,12 +34,13 @@ function getProduct() {
             let numberInCart = JSON.parse(JSON.stringify(numberProductCart));
 
             let sum = sumPrice(productParse);
-            $("#numberProdDrop").innerHTML = numberInCart;
-            $("#sum-cart").innerHTML = sum
+            console.log(numberInCart)
+            $("#numberProdDrop").html(numberInCart);
+            $("#sum-cart").html("$" + sum);
             for (let prod in productParse){
                 $("#li-cart").remove()
             }
-
+            console.log(productParse)
             for (let i = 0; i < productParse.length; i++) {
 
                 $("#product-cart").append(buildItemsInCart(productParse, i))
@@ -63,7 +67,7 @@ function getProduct() {
                 //     '</li>'
 
             }
-        });
+        }, err => console.log(err));
     });
 
 }
@@ -123,30 +127,29 @@ function sumPrice(productList) {
 
 function buildDropDownBasket(sum, numberProd) {
     console.log()
-    return '<div class="shopping-cart">' +
-                '<div class="shopping-cart-header">' +
-                    '<i id="basket-i" class="icon-basket-1"></i><span class="badge">'+ (parseInt(numberProd) + 1).toString() +'</span>' +
-                    '<div class="shopping-cart-total">' +
-                        '<span class="Lighter-text">Total:</span>' +
-                        '<span class="main-color-text total" id="sum-cart">'+ sum +'</span>' +
-                    '</div>' +
-                '</div>' +
-        '<ul class="shopping-cart-items" id="product-cart"></ul>' +
-        '<a href="/toConfirm" class="button">Checkout<i id="button-confirm" class="fa fa-chevron-right"></i></a>' +
-        '</div>' +
-        '</div>'
+    return ''
+    // return '<div class="shopping-cart">' +
+    //             '<div class="shopping-cart-header">' +
+    //                 '<i id="basket-i" class="icon-basket-1"></i><span class="badge">'+ (parseInt(numberProd) + 1).toString() +'</span>' +
+    //                 '<div class="shopping-cart-total">' +
+    //                     '<span class="Lighter-text">Total:</span>' +
+    //                     '<span class="main-color-text total" id="sum-cart">'+ sum +'</span>' +
+    //                 '</div>' +
+    //             '</div>' +
+    //     '<ul class="shopping-cart-items" id="product-cart"></ul>' +
+    //     '<a href="/toConfirm" class="button">Checkout<i id="button-confirm" class="fa fa-chevron-right"></i></a>' +
+    //     '</div>' +
+    //     '</div>'
 
 }
 
 function buildItemsInCart(product, i) {
-    console.log(product[i]["id"])
-    console.log('<img id="img-to-cart" src="/static/img/product_'+ parseInt(product[i]["id"]) +'.jpg">')
     return '<li class="clearfix" id="li-cart">' +
-        '<img id="img-to-cart" th:src="/static/img/product_'+parseInt(product[i]["id"])+'.jpg">' +
+        '<img id="img-to-cart" src="/static/img/product_'+parseInt(product[i]["id"])+'.jpg">' +
         '<span class="item-name">'+ product[i]['name'] +'</span>' +
         '<span class="item-detail">'+ product[i]["supplier"] +'</span>' +
-        '<span class="item-price">'+ product[i]["defaultPrice"] +'</span>' +
-        '<span class="quantity">'+ product[i]["quantity"] +'</span>' +
+        '<span class="item-price">Price $'+ product[i]["defaultPrice"] +'</span>' +
+        '<span class="quantity">Quan:'+ product[i]["quantity"] +'</span>' +
         '</li>'
 }
 
