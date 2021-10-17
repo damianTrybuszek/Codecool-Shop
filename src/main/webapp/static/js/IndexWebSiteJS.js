@@ -1,9 +1,9 @@
 
-setInterval(() => {
-    getData("/cart").then(numberProductCart => {
-        addRealNumber(numberProductCart)
-    })
-}, 200)
+// setInterval(() => {
+//     getData("/cart").then(numberProductCart => {
+//         addRealNumber(numberProductCart)
+//     })
+// }, 200)
 
 
 
@@ -14,8 +14,8 @@ function addProductToCart(id) {
     let element = document.getElementById(id)
     let productId = element.getAttribute("id")
 
-    sendProductToCart(productId).then(number => {
-        // addRealNumber(number)
+    sendProductToCart(productId).then(response => {
+        addRealNumber(response)
         addAlertDiv()
         setTimeout(function () {
             let empty = document.getElementById("alert-position");
@@ -26,15 +26,7 @@ function addProductToCart(id) {
 
 
 
-function getProduct() {
-    getData("/cart-items").then(productList =>{
-        let sum = sumPrice(productList)
-        makeDropCart()
-        addSumPrice(sum)
-        addItemDrop(productList)
-    })
 
-}
 
 // function showProdNumber() {
 //     let response = getData("/cart")
@@ -117,60 +109,12 @@ function buildAlert() {
 }
 
 function addRealNumber(cartNumber) {
-    let element = document.getElementById("badge-web");
-    element.innerHTML = cartNumber;
+    let element = document.getElementById("dropCart");
+    let span = document.getElementById("badge-web");
+    span.remove();
+    const newSpan = document.createElement("span");
+    newSpan.innerHTML = '<span class="badge" id="badge-web" th:text="${numProd}">'+ cartNumber[1] +'</span>'
+    element.parentNode.appendChild(newSpan);
 
 
-}
-function makeDropCart() {
-    let basket = document.getElementById("dropCart");
-    basket.insertAdjacentHTML("beforeend", buildDropDownBasket());
-
-}
-
-function addSumPrice(sumPrice){
-    let sum = document.getElementById("sum-cart");
-    sum.innerHTML = sumPrice;
-}
-
-function addItemDrop(productInCart){
-    let add = document.getElementById("product-cart");
-    for (let product in productInCart) {
-        add.insertAdjacentHTML("beforeend", buildItemsInCart(product));
-
-    }
-}
-
-function sumPrice(productList) {
-    let count = 0;
-    for (prod in productList) {
-        count = Math.ceil(parseInt(prod["defaultPrice"]) * parseInt(prod["quantity"]));
-    }
-    return count;
-}
-
-
-function buildDropDownBasket() {
-    return '<div class="shopping-cart">' +
-        '<div class="shopping-cart-header">' +
-        '<i class="icon-basket-1"></i>' +
-        '<span class="badge"></span>' +
-        '<div class="shopping-cart-total">' +
-        '<span class="Lighter-text">Total:</span>' +
-        '<span class="main-color-text total" id="sum-cart"></span>' +
-        '</div>' +
-        '</div>' +
-        '</div>' +
-        '<ul class="shopping-cart-items" id="product-cart"></ul>' +
-        '<a href="#" class="cofrim-shopping">Go</a>'
-}
-
-function buildItemsInCart(product) {
-    return '<li class="clearfix" id="li-cart">' +
-        '<img id="img-to-cart" src="/static/img/product_"' + product["id"] + '".jpg">' +
-        '<span class="item-name">'+ product["name"] +'</span>' +
-        '<span class="item-detail">'+ product["supplier"] +'</span>' +
-        '<span class="item-price">'+ product["defaultPrice"] +'</span>' +
-        '<span class="quantity">'+ product["quantity"] +'</span>' +
-        '</li>'
 }

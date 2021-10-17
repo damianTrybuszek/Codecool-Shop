@@ -1,5 +1,5 @@
 // addProductToCart();
-/*searchPhrase();*/
+searchPhrase();
 
 // function addProductToCart() {
 //   let buttons = document.getElementsByClassName("btn-success");
@@ -29,12 +29,12 @@ async function apiPost(url, payload) {
   }
 }
 
-// function searchPhrase(){
-//   let searchInputArea = document.getElementById("search-input");
-//   let searchSubmitButton = document.getElementById("search-submit")
-//
-//   searchSubmitButton.addEventListener("click", function () {
-//     let searchPhrase = "searchPhrase=" + searchInputArea.value;
-//     apiPost("/search/", searchPhrase);
-//   })
-// }
+function searchPhrase(){
+  let searchInputArea = document.getElementById("search-input");
+  let searchSubmitButton = document.getElementById("search-submit")
+
+  searchSubmitButton.addEventListener("click", function () {
+    let searchPhrase = "searchPhrase=" + searchInputArea.value;
+    apiPost("/search/", searchPhrase);
+  })
+}

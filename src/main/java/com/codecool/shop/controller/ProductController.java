@@ -28,8 +28,8 @@ public class ProductController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        CartDaoMem cartDao = CartDaoMem.getInstance();
         ProductDao productDataStore = ProductDaoMem.getInstance();
-        CartDaoMem cartDaoMem = CartDaoMem.getInstance();
         ProductCategoryDao productCategoryDataStore = ProductCategoryDaoMem.getInstance();
         SupplierDao supplierDao = SupplierDaoMem.getInstance();
         ProductService productService = new ProductService(productDataStore, productCategoryDataStore, supplierDao);
@@ -39,8 +39,7 @@ public class ProductController extends HttpServlet {
 
         context.setVariable("categories", productService.getAllProductCategory());
         context.setVariable("suppliers", productService.getAllSuppliers());
-        context.setVariable("cartQuantity", cartDaoMem.countProduct());
-
+        context.setVariable("numProd", cartDao.countProduct());
         int categoryId = 0;
         int supplierId = 0;
 
@@ -69,7 +68,7 @@ public class ProductController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        super.doPost(req, resp);
-
+        CartDaoMem cartDao = CartDaoMem.getInstance();
         ProductDao productDataStore = ProductDaoMem.getInstance();
         ProductCategoryDao productCategoryDataStore = ProductCategoryDaoMem.getInstance();
         SupplierDao supplierDao = SupplierDaoMem.getInstance();
@@ -79,7 +78,7 @@ public class ProductController extends HttpServlet {
         WebContext context = new WebContext(req, resp, req.getServletContext());
         context.setVariable("categories", productService.getAllProductCategory());
         context.setVariable("suppliers", productService.getAllSuppliers());
-
+        context.setVariable("numProd", cartDao.countProduct());
         if (element.contains("/search/")) {
             String phrase = req.getParameter("phrase");
             List<Product> searchingProducts = new ArrayList<>();

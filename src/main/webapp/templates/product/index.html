@@ -9,6 +9,7 @@
 
     <script type="text/javascript" th:src="@{static/js/main.js}" defer></script>
     <script src="/static/js/IndexWebSiteJS.js" type="text/javascript"></script>
+    <script src="/static/js/cartDropDown.js" type="text/javascript"></script>
 
     <!-- Bootstrap components -->
     <!-- Latest compiled and minified Jquery -->
@@ -34,38 +35,38 @@
     <!--  Fontello symbols End  -->
     <link rel="stylesheet" type="text/css" href="/static/css/custom.css"/>
     <!--  SCSS cart drop down -->
-    <link rel="stylesheet" type="text/css" href="/static/css/basket.scss">
+    <link rel="stylesheet" type="text/css" href="/static/css/forBasket.css">
 </head>
 
 <body>
-    <div class="container-fluid" style="width: 80%;">
-        <nav class="top-bar fixed-top">
-            <div class="row-fluid">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-                            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="col">
-                        <a class="navbar-brand" href="/">CODECOOL SHOP</a>
-                    </div>
+<div class="container-fluid" style="width: 80%;">
+    <nav class="top-bar fixed-top">
+        <div class="row-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="col">
+                    <a class="navbar-brand" href="/">CODECOOL SHOP</a>
+                </div>
 
-                    <div class="col">
-                        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                            <form class="form-inline my-2 my-lg-0">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                            </form>
-                        </div>
+                <div class="col">
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <form class="form-inline my-2 my-lg-0" action="/search/" method="post">
+                            <input id="search-input" name="phrase" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button id="search-submit" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
                     </div>
+                </div>
 
-                    <div class="col">
-                        <div class="btn-group">
-                            <a data-toggle="dropdown" href="#">
-                                <p>Category</p>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li th:each="category,iterStat : ${categories}">
+                <div class="col">
+                    <div class="btn-group">
+                        <a data-toggle="dropdown" href="#">
+                            <p>Category</p>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li th:each="category,iterStat : ${categories}">
                                     <span th:if="${highlightedCategory == category.id}">
                                         <strong>
                                             <a class="dropdown-item" style="font-size: x-large"
@@ -74,21 +75,21 @@
                                             </a>
                                         </strong>
                                     </span>
-                                    <span th:unless="${highlightedCategory == category.id}">
+                                <span th:unless="${highlightedCategory == category.id}">
                                         <a class="dropdown-item" th:href="@{'/category/'+${category.id}}"
                                            th:text="${category.name}">Category Name
                                         </a>
                                     </span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="btn-group">
-                            <a data-toggle="dropdown" href="#">
-                                <p>Supplier</p>
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li th:each="supplier,iterStat : ${suppliers}">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <a data-toggle="dropdown" href="#">
+                            <p>Supplier</p>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li th:each="supplier,iterStat : ${suppliers}">
                                     <span th:if="${highlightedSupplier == supplier.id}">
                                         <strong>
                                             <a class="dropdown-item" style="font-size: x-large"
@@ -96,53 +97,64 @@
                                             </a>
                                         </strong>
                                     </span>
-                                    <span th:unless="${highlightedSupplier == supplier.id}">
+                                <span th:unless="${highlightedSupplier == supplier.id}">
                                             <a class="dropdown-item" th:href="@{'/supplier/'+${supplier.id}}"
                                                th:text="${supplier.name}">Category Name
                                             </a>
                                     </span>
-                                </li>
-                            </ul>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="col-fluid">
-                        <div class="nav-content">
-                            <i class="icon-user"></i>
-                        </div>
-                        <div class="nav-content">
-                            <i class="icon-basket-1" onclick="getProduct()" id="dropCart"><span class="badge" id="badge-web"></span></i>
-                        </div>
+                <div class="col-fluid">
+                    <div class="nav-content">
+                        <i class="icon-user"></i>
                     </div>
-                </nav>
-            </div>
-
-            <div class="row">
-                <div class="space-between" id="space-alert"></div>
-            </div>
-        </nav>
-
-        <div class="row" style="margin-top: 120px;">
-            <div class="container" style="max-width: 80%;">
-                <div id="products" class="row">
-                    <div class="col-fluid col-sm-12 col-md-6 col-lg-4" th:each="prod,iterStat : ${products}">
-                        <div class="card fluid">
-                            <img class="" src="http://placehold.it/400x250/000/fff"
-                                 th:attr="src='/static/img/product_' + ${prod.id + 1} + '.jpg'" alt="" style="width:70%; height:70%; margin-left: 15%;   max-height: 450px;"/>
-                            <div class="card-header">
-                                <h4 class="card-title" th:text="${prod.name}">Product name</h4>
-                                <p class="card-text" th:text="${prod.description}">Product description... </p>
+                    <div  class="btn-group">
+                        <a data-toggle="dropdown" href="#" id="cart"><i onclick="getProduct()" class="icon-basket-1"  id="dropCart"><span class="badge" id="badge-web" th:text="${numProd}"
+                        >Number of Products</span></i><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <div class="shopping-cart-header">
+                                <i id="basket-i" class="icon-basket-1"></i><span class="badge" id="numberProdDrop"></span>
+                                <div class="shopping-cart-total">
+                                    <span class="Lighter-text">Total:</span>
+                                    <span class="main-color-text total" id="sum-cart"></span>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <div class="card-text">
-                                    <p class="lead" th:text="${prod.getPrice()}">100 USD</p>
-                                </div>
-                                <div class="card-text">
-                                    <button type="submit" class="btn btn-success" th:id="${prod.id}"
-                                            onclick="addProductToCart(this.id)">
-                                        Add to cart
-                                    </button>
-                                </div>
+                            <ul class="shopping-cart-items" id="product-cart"></ul>
+                            <a href="/toConfirm" class="button">Checkout<i id="button-confirm" class="fa fa-chevron-right"></i></a>
+                    </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row">
+            <div class="space-between" id="space-alert"></div>
+        </div>
+    </nav>
+
+    <div class="row" style="margin-top: 120px;">
+        <div class="container" style="max-width: 80%;">
+            <div id="products" class="row">
+                <div class="col-fluid col-sm-12 col-md-6 col-lg-4" th:each="prod,iterStat : ${products}">
+                    <div class="card fluid">
+                        <img class="" src="http://placehold.it/400x250/000/fff"
+                             th:attr="src='/static/img/product_' + ${prod.id + 1} + '.jpg'" alt="" style="width:70%; height:70%; margin-left: 15%;   max-height: 450px;"/>
+                        <div class="card-header">
+                            <h4 class="card-title" th:text="${prod.name}">Product name</h4>
+                            <p class="card-text" th:text="${prod.description}">Product description... </p>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text">
+                                <p class="lead" th:text="${prod.getPrice()}">100 USD</p>
+                            </div>
+                            <div class="card-text">
+                                <button type="submit" class="btn btn-success" th:id="${prod.id}"
+                                        onclick="addProductToCart(this.id)">
+                                    Add to cart
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -150,6 +162,7 @@
             </div>
         </div>
     </div>
+</div>
 <div th:replace="footer.html :: copy"></div>
 
 </body>
